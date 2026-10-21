@@ -4,31 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SkyHaven — Game Roadmap</title>
-  <meta name="description" content="Official development roadmap for SkyHaven on Roblox. See released features, what is in progress, and upcoming updates.">
+  <meta name="description" content="Official development roadmap for SkyHaven on Roblox. See completed features, what is in progress, and upcoming updates.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      --bg: #0b1120;
-      --surface: #131d31;
-      --surface-card: #18233c;
-      --surface-hover: #1f2d4d;
-      --border: #233354;
-      --border-light: #2e436e;
+      --bg: #0c121d;
+      --surface: #141c2b;
+      --surface-card: #192437;
+      --surface-hover: #202d45;
+      --border: #24344e;
+      --border-light: #304467;
       --text: #f1f5f9;
       --text-muted: #94a3b8;
       --text-dim: #64748b;
       --primary: #38bdf8;
       
-      --status-done-bg: rgba(16, 185, 129, 0.15);
-      --status-done-text: #34d399;
-      --status-done-border: rgba(16, 185, 129, 0.35);
+      /* In-game UI colors: vibrant olive green & warm amber */
+      --status-done-bg: rgba(150, 188, 54, 0.15);
+      --status-done-text: #96bc36;
+      --status-done-border: rgba(150, 188, 54, 0.4);
 
-      --status-wip-bg: rgba(245, 158, 11, 0.15);
-      --status-wip-text: #fbbf24;
-      --status-wip-border: rgba(245, 158, 11, 0.35);
+      --status-wip-bg: rgba(220, 130, 40, 0.15);
+      --status-wip-text: #dc8228;
+      --status-wip-border: rgba(220, 130, 40, 0.4);
 
       --status-planned-bg: rgba(148, 163, 184, 0.12);
       --status-planned-text: #94a3b8;
@@ -60,7 +61,7 @@
 
     /* ─── Header ─── */
     .site-header {
-      background: #090e1a;
+      background: #090e18;
       border-bottom: 1px solid var(--border);
       padding: 14px 0;
       position: sticky;
@@ -86,7 +87,7 @@
     .brand-icon {
       width: 32px;
       height: 32px;
-      background: #0284c7;
+      background: #96bc36;
       border-radius: var(--radius);
       display: flex;
       align-items: center;
@@ -107,9 +108,9 @@
     .brand-tag {
       font-size: 0.75rem;
       font-weight: 600;
-      color: #38bdf8;
-      background: rgba(56, 189, 248, 0.1);
-      border: 1px solid rgba(56, 189, 248, 0.25);
+      color: #96bc36;
+      background: rgba(150, 188, 54, 0.12);
+      border: 1px solid rgba(150, 188, 54, 0.3);
       padding: 2px 8px;
       border-radius: 4px;
     }
@@ -186,13 +187,13 @@
     .progress-pct {
       font-size: 1.15rem;
       font-weight: 700;
-      color: #38bdf8;
+      color: #96bc36;
     }
 
     .progress-track {
       width: 100%;
       height: 8px;
-      background: #090e1a;
+      background: #090e18;
       border-radius: 4px;
       overflow: hidden;
       margin-bottom: 12px;
@@ -200,8 +201,8 @@
 
     .progress-fill {
       height: 100%;
-      width: 61%;
-      background: #38bdf8;
+      width: 56%;
+      background: #96bc36;
       border-radius: 4px;
     }
 
@@ -249,7 +250,7 @@
     }
 
     .search-input-wrap input:focus {
-      border-color: #38bdf8;
+      border-color: #96bc36;
     }
 
     .search-icon {
@@ -288,9 +289,9 @@
     }
 
     .tab-btn.active {
-      background: #1e293b;
+      background: #1e2a3d;
       color: #fff;
-      border-color: #38bdf8;
+      border-color: #96bc36;
     }
 
     /* ─── Phases ─── */
@@ -328,7 +329,7 @@
       font-size: 0.78rem;
       font-weight: 700;
       color: var(--text-dim);
-      background: #090e1a;
+      background: #090e18;
       padding: 2px 7px;
       border-radius: 4px;
     }
@@ -351,10 +352,10 @@
       align-items: center;
       padding: 2px 8px;
       font-size: 0.72rem;
-      font-weight: 600;
+      font-weight: 700;
       border-radius: 4px;
       text-transform: uppercase;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.04em;
     }
 
     .badge-done {
@@ -409,9 +410,10 @@
 
     .category-label {
       font-size: 0.7rem;
-      font-weight: 600;
-      color: var(--text-dim);
+      font-weight: 700;
+      color: #7892b8;
       text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
     .feature-card h3 {
@@ -445,7 +447,7 @@
     /* Footer */
     .site-footer {
       border-top: 1px solid var(--border);
-      background: #090e1a;
+      background: #090e18;
       padding: 24px 0;
       margin-top: 50px;
       font-size: 0.82rem;
@@ -515,16 +517,16 @@
       <div class="progress-box">
         <div class="progress-box-top">
           <span class="progress-title">Overall Development</span>
-          <span class="progress-pct">61%</span>
+          <span class="progress-pct">56% Complete</span>
         </div>
         <div class="progress-track">
           <div class="progress-fill"></div>
         </div>
         <div class="stats-summary">
-          <div>Released: <strong>17</strong></div>
-          <div>In Progress: <strong>4</strong></div>
-          <div>Planned: <strong>7</strong></div>
-          <div>Total Features: <strong>28</strong></div>
+          <div>Complete: <strong>23</strong></div>
+          <div>In Progress: <strong>12</strong></div>
+          <div>Planned: <strong>6</strong></div>
+          <div>Total Features: <strong>41</strong></div>
         </div>
       </div>
     </section>
@@ -536,21 +538,21 @@
           <circle cx="11" cy="11" r="8"></circle>
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
-        <input type="text" id="searchInput" placeholder="Search features (crops, villagers, airship...)" autocomplete="off">
+        <input type="text" id="searchInput" placeholder="Search features (crops, villagers, pipes, biomes...)" autocomplete="off">
       </div>
 
       <div class="tab-buttons">
-        <button class="tab-btn active" data-status="all">All (28)</button>
-        <button class="tab-btn" data-status="completed">Released (17)</button>
-        <button class="tab-btn" data-status="in-progress">In Progress (4)</button>
-        <button class="tab-btn" data-status="planned">Planned (7)</button>
+        <button class="tab-btn active" data-status="all">All (41)</button>
+        <button class="tab-btn" data-status="completed">Complete (23)</button>
+        <button class="tab-btn" data-status="in-progress">In Progress (12)</button>
+        <button class="tab-btn" data-status="planned">Planned (6)</button>
       </div>
     </section>
 
     <!-- Pre-rendered Phases -->
     <div id="phasesContainer" class="phases-wrap">
 
-      <!-- Phase 1 -->
+      <!-- Phase 1: Building & Island Basics (COMPLETE) -->
       <section class="phase-block" data-phase="1">
         <div class="phase-header">
           <div>
@@ -560,50 +562,68 @@
             </div>
             <p class="phase-desc">The core systems for building and saving your island</p>
           </div>
-          <span class="badge badge-done">Done</span>
+          <span class="badge badge-done">Complete</span>
         </div>
 
         <div class="features-grid">
           <div class="feature-card" data-status="completed" data-search="block placement building grid">
             <div class="card-top">
               <span class="category-label">Building</span>
-              <span class="badge badge-done">Released</span>
+              <span class="badge badge-done">Complete</span>
             </div>
             <h3>Block Placement & Building</h3>
             <p>Place and break blocks on your private floating island with smooth grid alignment.</p>
           </div>
 
-          <div class="feature-card" data-status="completed" data-search="lag free block optimization performance greedy mesher">
+          <div class="feature-card" data-status="completed" data-search="smart stairs corner connect placement building">
             <div class="card-top">
               <span class="category-label">Building</span>
-              <span class="badge badge-done">Released</span>
+              <span class="badge badge-done">Complete</span>
+            </div>
+            <h3>Smart Stairs</h3>
+            <p>Stair blocks automatically turn into corners and connect smoothly when placed together.</p>
+          </div>
+
+          <div class="feature-card" data-status="completed" data-search="40k block limit island capacity budget building">
+            <div class="card-top">
+              <span class="category-label">Building</span>
+              <span class="badge badge-done">Complete</span>
+            </div>
+            <h3>40k Block Limit</h3>
+            <p>Generous 40,000 block building limit per island so you can build massive creations without running out of space.</p>
+          </div>
+
+          <div class="feature-card" data-status="completed" data-search="lag free block optimization performance greedy mesher">
+            <div class="card-top">
+              <span class="category-label">Performance</span>
+              <span class="badge badge-done">Complete</span>
             </div>
             <h3>Lag-Free Block Optimization</h3>
             <p>Adjacent blocks automatically merge together behind the scenes, keeping the game smooth even with huge islands.</p>
           </div>
 
-          <div class="feature-card" data-status="completed" data-search="auto save system persistence datastore">
+          <div class="feature-card" data-status="completed" data-search="streaming enabled performance chunks rendering">
             <div class="card-top">
-              <span class="category-label">Saving</span>
-              <span class="badge badge-done">Released</span>
+              <span class="category-label">Performance</span>
+              <span class="badge badge-done">Complete</span>
             </div>
-            <h3>Auto-Save System</h3>
-            <p>Your island, inventory, and chests save automatically so you never lose progress.</p>
+            <h3>Streaming Enabled</h3>
+            <p>Smart object streaming so dense islands, massive builds, and machines load smoothly without crashing or lagging.</p>
           </div>
 
-          <div class="feature-card" data-status="completed" data-search="smart grass stairs dirt transforms">
+          <div class="feature-card" data-status="completed" data-search="mobile support touch controls hotbar phones tablets">
             <div class="card-top">
-              <span class="category-label">Building</span>
-              <span class="badge badge-done">Released</span>
+              <span class="category-label">Controls</span>
+              <span class="badge badge-done">Complete</span>
             </div>
-            <h3>Smart Grass & Stairs</h3>
-            <p>Dirt turns to grass under sunlight, and stair blocks auto-turn into corners when placed together.</p>
+            <h3>Full Mobile Support</h3>
+            <p>Full touch controls and mobile UI for phones and tablets, including quick hotbar switching and tap-to-harvest prompts.</p>
           </div>
 
-          <div class="feature-card" data-status="completed" data-search="backpack hotbar inventory ui">
+          <div class="feature-card" data-status="completed" data-search="backpack hotbar inventory ui items">
             <div class="card-top">
               <span class="category-label">Inventory</span>
-              <span class="badge badge-done">Released</span>
+              <span class="badge badge-done">Complete</span>
             </div>
             <h3>Backpack & Hotbar</h3>
             <p>Clean inventory menu with item categories and a quick hotbar to switch tools easily.</p>
@@ -611,59 +631,59 @@
         </div>
       </section>
 
-      <!-- Phase 2 -->
+      <!-- Phase 2: Farming & Mining (COMPLETE) -->
       <section class="phase-block" data-phase="2">
         <div class="phase-header">
           <div>
             <div class="phase-title-wrap">
               <span class="phase-badge-num">Phase 2</span>
-              <h2 class="phase-title-text">Farming & Mining</h2>
+              <h2 class="phase-title-text">Farming, Nature & Mining</h2>
             </div>
-            <p class="phase-desc">Grow crops, chop trees, and mine ores</p>
+            <p class="phase-desc">Crops, orchards, berry bushes, ores, and atmosphere</p>
           </div>
-          <span class="badge badge-done">Done</span>
+          <span class="badge badge-done">Complete</span>
         </div>
 
         <div class="features-grid">
-          <div class="feature-card" data-status="completed" data-search="14 different crops wheat tomato potato carrot onion pumpkin watermelon dragonfruit">
+          <div class="feature-card" data-status="completed" data-search="multiple crops trees bushes wheat tomato carrot potato birch pine apple lemon blueberry raspberry">
             <div class="card-top">
               <span class="category-label">Farming</span>
-              <span class="badge badge-done">Released</span>
+              <span class="badge badge-done">Complete</span>
             </div>
-            <h3>14 Different Crops</h3>
-            <p>Plant seeds and harvest Wheat, Tomatoes, Potatoes, Carrots, Onions, Pumpkins, Watermelons, Pineapples, and Dragonfruit.</p>
+            <h3>Crops, Trees & Bushes</h3>
+            <p>Grow multiple crops (wheat, tomato, carrot, potato), trees (birch, pine, apple, lemon), and bushes (blueberry and raspberry).</p>
           </div>
 
-          <div class="feature-card" data-status="completed" data-search="watering cans sickles hoe tools farming">
+          <div class="feature-card" data-status="completed" data-search="watering cans sickles hoe tools farming crop growth">
             <div class="card-top">
               <span class="category-label">Farming</span>
-              <span class="badge badge-done">Released</span>
+              <span class="badge badge-done">Complete</span>
             </div>
             <h3>Watering Cans & Sickles</h3>
             <p>Till dirt with a hoe, speed up crop growth with watering cans, and harvest faster using tiered sickles.</p>
           </div>
 
-          <div class="feature-card" data-status="completed" data-search="trees fruit picking woodcutting axe apple lemon avocado birch pine">
-            <div class="card-top">
-              <span class="category-label">Woodcutting</span>
-              <span class="badge badge-done">Released</span>
-            </div>
-            <h3>Trees & Fruit Picking</h3>
-            <p>Chop down Birch, Pine, and Oak trees for wood, or grow Apple, Lemon, and Avocado trees for fresh fruit.</p>
-          </div>
-
-          <div class="feature-card" data-status="completed" data-search="ore nodes pickaxes mining stone coal iron gold">
+          <div class="feature-card" data-status="completed" data-search="ore nodes pickaxes mining stone coal iron gold resources">
             <div class="card-top">
               <span class="category-label">Mining</span>
-              <span class="badge badge-done">Released</span>
+              <span class="badge badge-done">Complete</span>
             </div>
             <h3>Ore Nodes & Pickaxes</h3>
             <p>Mine stone, coal, iron, and gold nodes that spawn around your island using tiered pickaxes.</p>
           </div>
+
+          <div class="feature-card" data-status="completed" data-search="day night cycle sky atmosphere lighting wind celestial">
+            <div class="card-top">
+              <span class="category-label">World</span>
+              <span class="badge badge-done">Complete</span>
+            </div>
+            <h3>Day & Night Cycle</h3>
+            <p>Dynamic daylight, glowing twilight sunsets, and starry nights with soft wind effects across the sky.</p>
+          </div>
         </div>
       </section>
 
-      <!-- Phase 3 -->
+      <!-- Phase 3: Storage & Crafting (COMPLETE) -->
       <section class="phase-block" data-phase="3">
         <div class="phase-header">
           <div>
@@ -671,52 +691,52 @@
               <span class="phase-badge-num">Phase 3</span>
               <h2 class="phase-title-text">Storage & Crafting</h2>
             </div>
-            <p class="phase-desc">Chests, workbench recipes, and furnaces</p>
+            <p class="phase-desc">Chests, crafting workstations, furnaces, and item physics</p>
           </div>
-          <span class="badge badge-done">Done</span>
+          <span class="badge badge-done">Complete</span>
         </div>
 
         <div class="features-grid">
-          <div class="feature-card" data-status="completed" data-search="safe inventory system anti dupe">
+          <div class="feature-card" data-status="completed" data-search="multiple chests storage automated normal containers">
+            <div class="card-top">
+              <span class="category-label">Storage</span>
+              <span class="badge badge-done">Complete</span>
+            </div>
+            <h3>Multiple Chests</h3>
+            <p>Multiple chest types to store your items, including normal storage chests and automated chests for factory systems.</p>
+          </div>
+
+          <div class="feature-card" data-status="completed" data-search="crafting workstations tables benches recipes parts tools">
+            <div class="card-top">
+              <span class="category-label">Crafting</span>
+              <span class="badge badge-done">Complete</span>
+            </div>
+            <h3>Crafting Workstations</h3>
+            <p>Multiple crafting workstations to create tools, seeds, decorative blocks, and building parts.</p>
+          </div>
+
+          <div class="feature-card" data-status="completed" data-search="droppable items q f drop pick up controls physics">
+            <div class="card-top">
+              <span class="category-label">Gameplay</span>
+              <span class="badge badge-done">Complete</span>
+            </div>
+            <h3>Droppable Items (Q / F)</h3>
+            <p>Press Q to drop items on the ground and press F while aiming to pick them up.</p>
+          </div>
+
+          <div class="feature-card" data-status="completed" data-search="safe inventory system anti dupe atomic storage">
             <div class="card-top">
               <span class="category-label">Inventory</span>
-              <span class="badge badge-done">Released</span>
+              <span class="badge badge-done">Complete</span>
             </div>
             <h3>Safe Inventory System</h3>
             <p>Items move smoothly between inventory, chests, and crafting without risk of disappearing or duplicating.</p>
           </div>
 
-          <div class="feature-card" data-status="completed" data-search="drop pick up items q f controls">
-            <div class="card-top">
-              <span class="category-label">Gameplay</span>
-              <span class="badge badge-done">Released</span>
-            </div>
-            <h3>Drop & Pick Up Items (Q / F)</h3>
-            <p>Press Q to drop items on the ground and press F while aiming to pick them up.</p>
-          </div>
-
-          <div class="feature-card" data-status="completed" data-search="storage chests wooden iron container">
-            <div class="card-top">
-              <span class="category-label">Storage</span>
-              <span class="badge badge-done">Released</span>
-            </div>
-            <h3>Storage Chests</h3>
-            <p>Place wooden and iron chests to store items with animated opening lids.</p>
-          </div>
-
-          <div class="feature-card" data-status="completed" data-search="crafting workbench table recipes">
+          <div class="feature-card" data-status="completed" data-search="furnaces composters smelting ingots iron gold fertilizer">
             <div class="card-top">
               <span class="category-label">Crafting</span>
-              <span class="badge badge-done">Released</span>
-            </div>
-            <h3>Crafting Workbench</h3>
-            <p>Craft new tools, seeds, decorative blocks, and building parts from materials you collect.</p>
-          </div>
-
-          <div class="feature-card" data-status="completed" data-search="furnaces composters smelting ingots fertilizer">
-            <div class="card-top">
-              <span class="category-label">Crafting</span>
-              <span class="badge badge-done">Released</span>
+              <span class="badge badge-done">Complete</span>
             </div>
             <h3>Furnaces & Composters</h3>
             <p>Smelt raw iron and gold into ingots, or turn organic scraps into fertilizer to speed up crops.</p>
@@ -724,33 +744,42 @@
         </div>
       </section>
 
-      <!-- Phase 4 -->
+      <!-- Phase 4: Villagers & Factory Automation (COMPLETE) -->
       <section class="phase-block" data-phase="4">
         <div class="phase-header">
           <div>
             <div class="phase-title-wrap">
               <span class="phase-badge-num">Phase 4</span>
-              <h2 class="phase-title-text">Villagers & Factory Pipes</h2>
+              <h2 class="phase-title-text">Villagers & Factory Automation</h2>
             </div>
-            <p class="phase-desc">Automate your island with helper NPCs and pipes</p>
+            <p class="phase-desc">Helpers, dwarf workers, pipes, skills, and personal airships</p>
           </div>
-          <span class="badge badge-done">95% Done</span>
+          <span class="badge badge-done">Complete</span>
         </div>
 
         <div class="features-grid">
-          <div class="feature-card" data-status="completed" data-search="villager helpers farmer miner bed npc">
+          <div class="feature-card" data-status="completed" data-search="villager helpers farmer miner bed npc autonomous">
             <div class="card-top">
-              <span class="category-label">Automation</span>
-              <span class="badge badge-done">Released</span>
+              <span class="category-label">Villagers</span>
+              <span class="badge badge-done">Complete</span>
             </div>
             <h3>Villager Helpers</h3>
-            <p>Place a bed to invite villagers to live on your island. Farmers till, plant, and harvest; miners break ores for you.</p>
+            <p>Place a bed to invite villagers to live on your island. Farmers till and harvest; miners break ores for you.</p>
+          </div>
+
+          <div class="feature-card" data-status="completed" data-search="villager dwarfs helpers single tasks harvesting hauling worker">
+            <div class="card-top">
+              <span class="category-label">Villagers</span>
+              <span class="badge badge-done">Complete</span>
+            </div>
+            <h3>Villager Dwarfs</h3>
+            <p>Mini villager helpers that handle single dedicated tasks for your villagers, like harvesting crops or hauling items.</p>
           </div>
 
           <div class="feature-card" data-status="completed" data-search="smart villager walking ai pathfinding navigation stairs">
             <div class="card-top">
-              <span class="category-label">Automation</span>
-              <span class="badge badge-done">Released</span>
+              <span class="category-label">Villagers</span>
+              <span class="badge badge-done">Complete</span>
             </div>
             <h3>Smart Villager Walking</h3>
             <p>Villagers can walk up stairs, navigate around walls, and easily find their way around your builds.</p>
@@ -759,16 +788,34 @@
           <div class="feature-card" data-status="completed" data-search="factory transport pipes logistics glass items automation">
             <div class="card-top">
               <span class="category-label">Automation</span>
-              <span class="badge badge-done">Released</span>
+              <span class="badge badge-done">Complete</span>
             </div>
             <h3>Factory Transport Pipes</h3>
             <p>Connect machines, chests, and crops with pipes to move items around automatically. You can see items traveling inside.</p>
           </div>
 
+          <div class="feature-card" data-status="completed" data-search="funnel pipes dropped items pickup pipe conversion automation">
+            <div class="card-top">
+              <span class="category-label">Automation</span>
+              <span class="badge badge-done">Complete</span>
+            </div>
+            <h3>Funnel Pipes</h3>
+            <p>Special funnel pipes that pick up dropped items from the ground and convert them into pipe transport items automatically.</p>
+          </div>
+
+          <div class="feature-card" data-status="completed" data-search="personal island airship dock transport travel">
+            <div class="card-top">
+              <span class="category-label">Travel</span>
+              <span class="badge badge-done">Complete</span>
+            </div>
+            <h3>Personal Island Airship</h3>
+            <p>Every island comes with a dock and an airship ready to take you into the skies.</p>
+          </div>
+
           <div class="feature-card" data-status="completed" data-search="player skills leveling xp levels farming mining woodcutting">
             <div class="card-top">
               <span class="category-label">Progression</span>
-              <span class="badge badge-done">Released</span>
+              <span class="badge badge-done">Complete</span>
             </div>
             <h3>Player Skills & Leveling</h3>
             <p>Level up your Farming, Mining, and Woodcutting skills to unlock better tools, faster speeds, and rare seeds.</p>
@@ -776,27 +823,108 @@
         </div>
       </section>
 
-      <!-- Phase 5 -->
+      <!-- Phase 5: In Active Development (IN PROGRESS) -->
       <section class="phase-block" data-phase="5">
         <div class="phase-header">
           <div>
             <div class="phase-title-wrap">
               <span class="phase-badge-num">Phase 5</span>
-              <h2 class="phase-title-text">Airships & Visiting Friends</h2>
+              <h2 class="phase-title-text">In Active Development</h2>
             </div>
-            <p class="phase-desc">Explore the skies and visit other players</p>
+            <p class="phase-desc">Features currently being coded, built, and tested</p>
           </div>
-          <span class="badge badge-wip">In Progress (65%)</span>
+          <span class="badge badge-wip">In Progress</span>
         </div>
 
         <div class="features-grid">
-          <div class="feature-card" data-status="completed" data-search="personal island airship dock transport travel">
+          <div class="feature-card" data-status="in-progress" data-search="biome 1 golem paradise stone golems ruins exploration sky island">
             <div class="card-top">
-              <span class="category-label">Travel</span>
-              <span class="badge badge-done">Released</span>
+              <span class="category-label">Biomes</span>
+              <span class="badge badge-wip">In Progress</span>
             </div>
-            <h3>Personal Island Airship</h3>
-            <p>Every island comes with a dock and an airship ready to take you into the skies.</p>
+            <h3>Biome 1: Golem Paradise</h3>
+            <p>A mysterious sky biome filled with ancient stone golems, ruins, and rare resources to explore.</p>
+          </div>
+
+          <div class="feature-card" data-status="in-progress" data-search="biome 2 the wetlands swamp flora clay deposits humid weather">
+            <div class="card-top">
+              <span class="category-label">Biomes</span>
+              <span class="badge badge-wip">In Progress</span>
+            </div>
+            <h3>Biome 2: The Wetlands</h3>
+            <p>A lush, misty swamp island biome featuring waterlogged flora, rich clay deposits, and humid weather.</p>
+          </div>
+
+          <div class="feature-card" data-status="in-progress" data-search="industrial equipment smelters stonecutters fabricators machines automation">
+            <div class="card-top">
+              <span class="category-label">Automation</span>
+              <span class="badge badge-wip">In Progress</span>
+            </div>
+            <h3>Industrial Equipment</h3>
+            <p>Heavy-duty processing machines including advanced smelters, stonecutters, and high-throughput fabricators.</p>
+          </div>
+
+          <div class="feature-card" data-status="in-progress" data-search="onboarding player tutorial beginner guide quests hints">
+            <div class="card-top">
+              <span class="category-label">Gameplay</span>
+              <span class="badge badge-wip">In Progress</span>
+            </div>
+            <h3>Player Onboarding</h3>
+            <p>Interactive beginner tutorial, quest guidance, and hints to help new players get started on their island.</p>
+          </div>
+
+          <div class="feature-card" data-status="in-progress" data-search="server load testing players per server performance stress test">
+            <div class="card-top">
+              <span class="category-label">Technical</span>
+              <span class="badge badge-wip">In Progress</span>
+            </div>
+            <h3>Server Load Testing</h3>
+            <p>Stress-testing server performance to find the optimal player count per server while keeping physics, villagers, and pipes at high FPS.</p>
+          </div>
+
+          <div class="feature-card" data-status="in-progress" data-search="vending machines trading player shops stalls market economy">
+            <div class="card-top">
+              <span class="category-label">Economy</span>
+              <span class="badge badge-wip">In Progress</span>
+            </div>
+            <h3>Vending Machines</h3>
+            <p>Placeable vending machine shops that allow visitors to buy and sell items on your island automatically.</p>
+          </div>
+
+          <div class="feature-card" data-status="in-progress" data-search="warrior villager class combat guard defense patrol npcs">
+            <div class="card-top">
+              <span class="category-label">Villagers</span>
+              <span class="badge badge-wip">In Progress</span>
+            </div>
+            <h3>Warrior Villager Class</h3>
+            <p>Recruit combat-ready warrior villagers to guard your island and patrol the grounds.</p>
+          </div>
+
+          <div class="feature-card" data-status="in-progress" data-search="gardener villager class flowers trees berry bushes prune npcs">
+            <div class="card-top">
+              <span class="category-label">Villagers</span>
+              <span class="badge badge-wip">In Progress</span>
+            </div>
+            <h3>Gardener Villager Class</h3>
+            <p>Specialized gardener NPCs that care for flower beds, prune fruit trees, and tend berry bushes.</p>
+          </div>
+
+          <div class="feature-card" data-status="in-progress" data-search="tool animations custom swings mining chopping till physics">
+            <div class="card-top">
+              <span class="category-label">Animation</span>
+              <span class="badge badge-wip">In Progress</span>
+            </div>
+            <h3>Tool Animations</h3>
+            <p>Custom swing, till, chop, and mining animations with smooth spring physics for all tools.</p>
+          </div>
+
+          <div class="feature-card" data-status="in-progress" data-search="coins currency gold money orders economy trading">
+            <div class="card-top">
+              <span class="category-label">Economy</span>
+              <span class="badge badge-wip">In Progress</span>
+            </div>
+            <h3>Coins & Currency</h3>
+            <p>In-game economy with gold coins earned from selling crops, fulfilling island orders, and trading.</p>
           </div>
 
           <div class="feature-card" data-status="in-progress" data-search="visiting other islands multiplayer friends permissions block privacy">
@@ -806,15 +934,6 @@
             </div>
             <h3>Visiting Other Islands</h3>
             <p>Browse online players and visit their islands. Owners can set permissions, block players, or make their island private.</p>
-          </div>
-
-          <div class="feature-card" data-status="in-progress" data-search="day night sky weather sunset lighting wind atmosphere">
-            <div class="card-top">
-              <span class="category-label">World</span>
-              <span class="badge badge-wip">In Progress</span>
-            </div>
-            <h3>Day & Night Sky</h3>
-            <p>Dynamic daylight, sunset, and starry nights with soft wind effects through the trees.</p>
           </div>
 
           <div class="feature-card" data-status="in-progress" data-search="island previews snapshot inspection travel">
@@ -828,15 +947,15 @@
         </div>
       </section>
 
-      <!-- Phase 6 -->
+      <!-- Phase 6: Planned Updates (PLANNED) -->
       <section class="phase-block" data-phase="6">
         <div class="phase-header">
           <div>
             <div class="phase-title-wrap">
               <span class="phase-badge-num">Phase 6</span>
-              <h2 class="phase-title-text">Trading & Shops</h2>
+              <h2 class="phase-title-text">Planned Updates</h2>
             </div>
-            <p class="phase-desc">Player-to-player trading, money, and custom looks</p>
+            <p class="phase-desc">Upcoming community features, livestock, and expeditions</p>
           </div>
           <span class="badge badge-planned">Planned</span>
         </div>
@@ -860,15 +979,6 @@
             <p>Trade items and resources safely with other players through a secure trade menu, or set up a stall on your island.</p>
           </div>
 
-          <div class="feature-card" data-status="planned" data-search="coins currency money gold orders challenges">
-            <div class="card-top">
-              <span class="category-label">Economy</span>
-              <span class="badge badge-planned">Planned</span>
-            </div>
-            <h3>Coins & Currency</h3>
-            <p>Earn coins by selling crops, fulfilling orders, and completing daily island challenges.</p>
-          </div>
-
           <div class="feature-card" data-status="planned" data-search="airship skins banners decorations cosmetics flags lanterns">
             <div class="card-top">
               <span class="category-label">Building</span>
@@ -877,23 +987,7 @@
             <h3>Airship Skins & Banners</h3>
             <p>Customize your island with decorative flags, lanterns, and paint colors for your airship.</p>
           </div>
-        </div>
-      </section>
 
-      <!-- Phase 7 -->
-      <section class="phase-block" data-phase="7">
-        <div class="phase-header">
-          <div>
-            <div class="phase-title-wrap">
-              <span class="phase-badge-num">Phase 7</span>
-              <h2 class="phase-title-text">Animals & Dungeons</h2>
-            </div>
-            <p class="phase-desc">Farm animals, storm dungeons, and advanced machines</p>
-          </div>
-          <span class="badge badge-planned">Planned</span>
-        </div>
-
-        <div class="features-grid">
           <div class="feature-card" data-status="planned" data-search="farm animals chickens sheep cows livestock ranching pasture">
             <div class="card-top">
               <span class="category-label">Farming</span>
@@ -928,14 +1022,14 @@
     <!-- Empty Search State -->
     <div id="noResults" class="no-results">
       <h3>No features found</h3>
-      <p>Try searching for something else like "crops", "villagers", or "airship".</p>
+      <p>Try searching for something else like "crops", "villagers", "airship", or "biomes".</p>
     </div>
   </main>
 
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>SkyHaven (Roblox) — Development roadmap</p>
+      <p>SkyHaven (Roblox) — Official player development roadmap</p>
       <div class="footer-links">
         <a href="https://github.com/Wizinator/SkyHaven-Roadmap" target="_blank" rel="noopener noreferrer">Roadmap Repository</a>
         <a href="https://github.com/Wizinator/SkyHaven-Roadmap/issues" target="_blank" rel="noopener noreferrer">Feedback & Ideas</a>

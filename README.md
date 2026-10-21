@@ -1,80 +1,86 @@
 # 🏝️ SkyHaven — Game Roadmap
 
-> **Live Website:** [https://wizinator.github.io/SkyHaven-Roadmap/](https://wizinator.github.io/SkyHaven-Roadmap/)  
+> **Live Interactive Website:** [https://wizinator.github.io/SkyHaven-Roadmap/](https://wizinator.github.io/SkyHaven-Roadmap/)  
 > Check out what's in the game now and what we're working on next.
 
 ---
 
 ## 🧭 Overview
 
-- **Phase 1: Building & Island Basics** — `Released` (100%)
-- **Phase 2: Farming & Mining** — `Released` (100%)
-- **Phase 3: Storage & Crafting** — `Released` (100%)
-- **Phase 4: Villagers & Factory Pipes** — `Released` (95%)
-- **Phase 5: Airships & Visiting Friends** — `In Progress` (~65%)
-- **Phase 6: Trading & Shops** — `Planned`
-- **Phase 7: Animals & Dungeons** — `Planned`
+- **Phase 1: Building & Island Basics** — `Complete` (100%)
+- **Phase 2: Farming, Nature & Mining** — `Complete` (100%)
+- **Phase 3: Storage & Crafting** — `Complete` (100%)
+- **Phase 4: Villagers & Factory Automation** — `Complete` (100%)
+- **Phase 5: In Active Development** — `In Progress` (12 features)
+- **Phase 6: Planned Updates** — `Planned` (6 features)
 
 ---
 
-## ✅ Phase 1: Building & Island Basics (Released)
+## ✅ Phase 1: Building & Island Basics (Complete)
 
 - [x] **Block Placement & Building:** Place and break blocks on your private floating island with smooth grid alignment.
-- [x] **Lag-Free Optimization:** Blocks merge together behind the scenes, keeping the game smooth even with huge islands.
-- [x] **Auto-Save System:** Your island, inventory, and chests save automatically so you never lose progress.
-- [x] **Smart Grass & Stairs:** Dirt turns to grass under sunlight, and stair blocks auto-turn into corners when placed together.
+- [x] **Smart Stairs:** Stair blocks automatically turn into corners and connect smoothly when placed together.
+- [x] **40k Block Limit:** Generous 40,000 block building limit per island so you can build massive creations without running out of space.
+- [x] **Lag-Free Block Optimization:** Adjacent blocks automatically merge together behind the scenes, keeping the game smooth even with huge islands.
+- [x] **Streaming Enabled:** Smart object streaming so dense islands, massive builds, and machines load smoothly without crashing or lagging.
+- [x] **Full Mobile Support:** Full touch controls and mobile UI for phones and tablets, including quick hotbar switching and tap-to-harvest prompts.
 - [x] **Backpack & Hotbar:** Clean inventory menu with item categories and a quick hotbar to switch tools easily.
 
 ---
 
-## ✅ Phase 2: Farming & Mining (Released)
+## ✅ Phase 2: Farming, Nature & Mining (Complete)
 
-- [x] **14 Different Crops:** Plant and harvest Wheat, Tomatoes, Potatoes, Carrots, Onions, Pumpkins, Watermelons, Pineapples, Dragonfruit, and more.
+- [x] **Crops, Trees & Bushes:** Grow multiple crops (wheat, tomato, carrot, potato), trees (birch, pine, apple, lemon), and bushes (blueberry and raspberry).
 - [x] **Watering Cans & Sickles:** Till dirt with a hoe, speed up crop growth with watering cans, and harvest faster using tiered sickles.
-- [x] **Trees & Fruit Picking:** Chop down Birch, Pine, and Oak trees for wood, or grow Apple, Lemon, and Avocado trees for fresh fruit.
 - [x] **Ore Nodes & Pickaxes:** Mine stone, coal, iron, and gold nodes that spawn around your island using tiered pickaxes.
+- [x] **Day & Night Cycle:** Dynamic daylight, glowing twilight sunsets, and starry nights with soft wind effects across the sky.
 
 ---
 
-## ✅ Phase 3: Storage & Crafting (Released)
+## ✅ Phase 3: Storage & Crafting (Complete)
 
+- [x] **Multiple Chests:** Multiple chest types to store your items, including normal storage chests and automated chests for factory systems.
+- [x] **Crafting Workstations:** Multiple crafting workstations to create tools, seeds, decorative blocks, and building parts.
+- [x] **Droppable Items (Q / F):** Press Q to drop items on the ground and press F while aiming to pick them up.
 - [x] **Safe Inventory System:** Items move smoothly between inventory, chests, and crafting without risk of disappearing or duplicating.
-- [x] **Drop & Pick Up Items (Q / F):** Press Q to drop items on the ground and press F while aiming to pick them up.
-- [x] **Storage Chests:** Place wooden and iron chests to store items with animated opening lids.
-- [x] **Crafting Workbench:** Craft new tools, seeds, decorative blocks, and building parts from materials you collect.
 - [x] **Furnaces & Composters:** Smelt raw iron and gold into ingots, or turn organic scraps into fertilizer to speed up crops.
 
 ---
 
-## ✅ Phase 4: Villagers & Factory Pipes (Released)
+## ✅ Phase 4: Villagers & Factory Automation (Complete)
 
-- [x] **Villager Helpers:** Place a bed to invite villagers to live on your island. Farmer villagers till, plant, and harvest crops; miner villagers break ores for you.
-- [x] **Smart Villager Walking:** Villagers can walk up stairs, navigate around walls, and find their way around your builds.
-- [x] **Factory Transport Pipes:** Connect machines, chests, and crops with pipes to move items around automatically.
+- [x] **Villager Helpers:** Place a bed to invite villagers to live on your island. Farmers till and harvest; miners break ores for you.
+- [x] **Villager Dwarfs:** Mini villager helpers that handle single dedicated tasks for your villagers, like harvesting crops or hauling items.
+- [x] **Smart Villager Walking:** Villagers can walk up stairs, navigate around walls, and easily find their way around your builds.
+- [x] **Factory Transport Pipes:** Connect machines, chests, and crops with pipes to move items around automatically. You can see items traveling inside.
+- [x] **Funnel Pipes:** Special funnel pipes that pick up dropped items from the ground and convert them into pipe transport items automatically.
+- [x] **Personal Island Airship:** Every island comes with a dock and an airship ready to take you into the skies.
 - [x] **Player Skills & Leveling:** Level up your Farming, Mining, and Woodcutting skills to unlock better tools, faster speeds, and rare seeds.
 
 ---
 
-## 🔨 Phase 5: Airships & Visiting Friends (In Progress)
+## 🔨 Phase 5: In Active Development (In Progress)
 
-- [x] **Personal Island Airship:** Every island comes with a dock and an airship ready to take you into the skies.
-- [ ] **Visiting Other Islands:** Browse online players and visit their islands. Island owners can set permissions, block players, or make their island private.
-- [ ] **Day & Night Sky:** Dynamic daylight, sunset, and starry nights with soft wind effects through the trees.
+- [ ] **Biome 1: Golem Paradise:** A mysterious sky biome filled with ancient stone golems, ruins, and rare resources to explore.
+- [ ] **Biome 2: The Wetlands:** A lush, misty swamp island biome featuring waterlogged flora, rich clay deposits, and humid weather.
+- [ ] **Industrial Equipment:** Heavy-duty processing machines including advanced smelters, stonecutters, and high-throughput fabricators.
+- [ ] **Player Onboarding:** Interactive beginner tutorial, quest guidance, and hints to help new players get started on their island.
+- [ ] **Server Load Testing:** Stress-testing server performance to find the optimal player count per server while keeping physics, villagers, and pipes at high FPS.
+- [ ] **Vending Machines:** Placeable vending machine shops that allow visitors to buy and sell items on your island automatically.
+- [ ] **Warrior Villager Class:** Recruit combat-ready warrior villagers to guard your island and patrol the grounds.
+- [ ] **Gardener Villager Class:** Specialized gardener NPCs that care for flower beds, prune fruit trees, and tend berry bushes.
+- [ ] **Tool Animations:** Custom swing, till, chop, and mining animations with smooth spring physics for all tools.
+- [ ] **Coins & Currency:** In-game economy with gold coins earned from selling crops, fulfilling island orders, and trading.
+- [ ] **Visiting Other Islands:** Browse online players and visit their islands. Owners can set permissions, block players, or make their island private.
 - [ ] **Island Previews:** See a snapshot of an island and its owner's level before you fly there.
 
 ---
 
-## 📋 Phase 6: Trading & Shops (Planned)
+## 📋 Phase 6: Planned Updates (Planned)
 
 - [ ] **Public Market Hub:** A central sky town where players gather to meet wandering merchants and buy rare seeds and blueprints.
-- [ ] **Player-to-Player Trading:** Trade items and resources safely with other players through a secure trade menu, or set up a stall on your island.
-- [ ] **Coins & Currency:** Earn coins by selling crops, fulfilling orders, and completing daily island challenges.
+- [ ] **Player-to-Player Trading:** Trade items and resources safely with other players through a secure trade menu.
 - [ ] **Airship Skins & Banners:** Customize your island with decorative flags, lanterns, and paint colors for your airship.
-
----
-
-## 💡 Phase 7: Animals & Dungeons (Future Ideas)
-
 - [ ] **Farm Animals:** Raise chickens for eggs, sheep for wool, and cows for milk in fenced pastures on your island.
 - [ ] **Sky Dungeons & Monsters:** Fly to mysterious storm islands with your friends to fight monsters, solve puzzles, and win rare loot.
 - [ ] **Sprinklers & Auto-Harvesters:** Build sprinkler systems to water whole fields at once, along with conveyor belts and sorters.
