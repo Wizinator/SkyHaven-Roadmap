@@ -44,8 +44,10 @@
     }
 
     :root {
-      --font-title: 'Fredoka One', 'Fredoka', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      --font-body: 'Fredoka', 'Fredoka One', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-display: 'Fredoka One', 'Fredoka', cursive, sans-serif;
+      --font-title: 'Fredoka One', 'Fredoka', cursive, sans-serif;
+      --font-ui: 'Fredoka', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-body: 'Fredoka', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       
       /* In-game Wood Frame Palette (Sampled directly from game UI frame) */
       --bg-deep: #1e1109;
@@ -83,10 +85,15 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      font-synthesis: none;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
     }
 
     body {
       font-family: var(--font-body);
+      font-weight: 400;
       background-color: #170c06;
       background-image: 
         linear-gradient(180deg, rgba(28, 16, 8, 0.82) 0%, rgba(20, 10, 5, 0.88) 100%),
@@ -103,20 +110,25 @@
 
     body, button, input, select, textarea {
       font-family: var(--font-body);
+      font-weight: 400;
     }
 
-    h1, h2, h3, h4, 
-    .brand-title, 
+    h1, h2, .brand-title, .category-title {
+      font-family: var(--font-display);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
     .brand-tag,
-    .category-title, 
-    .feature-name, 
-    .progress-pct, 
-    .progress-title, 
-    .tab-btn, 
-    .badge, 
+    .progress-title,
+    .progress-pct,
+    .tab-btn,
+    .badge,
+    .badge-subcat,
     .btn-wood,
     .stats-summary strong {
-      font-family: var(--font-title);
+      font-family: var(--font-ui);
+      font-weight: 600;
       letter-spacing: 0.02em;
     }
 
@@ -213,17 +225,17 @@
     }
 
     .brand-title {
-      font-family: var(--font-title);
+      font-family: var(--font-display);
       font-size: 1.35rem;
-      font-weight: 700;
+      font-weight: 400;
       color: var(--text-ivory);
       letter-spacing: 0.04em;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
     }
 
     .brand-tag {
+      font-family: var(--font-ui);
       font-size: 0.72rem;
-      font-weight: 700;
+      font-weight: 600;
       color: var(--text-ivory);
       background: rgba(207, 168, 118, 0.15);
       border: 1px solid var(--divider-gold);
@@ -266,12 +278,12 @@
     }
 
     .hero h1 {
-      font-family: var(--font-title);
+      font-family: var(--font-display);
       font-size: clamp(2rem, 4vw, 2.85rem);
-      font-weight: 700;
+      font-weight: 400;
       color: var(--text-ivory);
       margin-bottom: 8px;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
       letter-spacing: 0.03em;
     }
 
@@ -302,17 +314,17 @@
     }
 
     .progress-title {
-      font-family: var(--font-title);
+      font-family: var(--font-ui);
       font-size: 1rem;
-      font-weight: 700;
+      font-weight: 600;
       color: var(--text-ivory);
-      letter-spacing: 0.04em;
+      letter-spacing: 0.02em;
     }
 
     .progress-pct {
-      font-family: var(--font-title);
+      font-family: var(--font-display);
       font-size: 1.25rem;
-      font-weight: 700;
+      font-weight: 400;
       color: var(--badge-done-text);
     }
 
@@ -404,8 +416,8 @@
     .tab-btn {
       padding: 8px 14px;
       font-size: 0.84rem;
-      font-weight: 700;
-      font-family: inherit;
+      font-weight: 600;
+      font-family: var(--font-ui);
       color: var(--text-tan);
       background: var(--wood-card-inner);
       border: 1px solid var(--wood-border);
@@ -468,13 +480,13 @@
     }
 
     .category-title {
-      font-family: var(--font-title);
+      font-family: var(--font-display);
       font-size: 1.45rem;
-      font-weight: 700;
+      font-weight: 400;
       color: var(--text-ivory);
-      letter-spacing: 0.04em;
+      letter-spacing: 0.03em;
       white-space: nowrap;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     }
 
     /* Feature Cards */
@@ -515,21 +527,22 @@
     }
 
     .badge-subcat {
+      font-family: var(--font-ui);
       font-size: 0.7rem;
-      font-weight: 700;
+      font-weight: 600;
       color: var(--text-tan);
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
 
     .feature-card h3 {
-      font-family: var(--font-title);
+      font-family: var(--font-ui);
       font-size: 1.05rem;
-      font-weight: 700;
+      font-weight: 600;
       color: var(--text-ivory);
       margin-bottom: 6px;
       line-height: 1.35;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.01em;
     }
 
     .feature-card p {
@@ -543,8 +556,9 @@
       display: inline-flex;
       align-items: center;
       padding: 2px 8px;
+      font-family: var(--font-ui);
       font-size: 0.72rem;
-      font-weight: 700;
+      font-weight: 600;
       border-radius: 4px;
       text-transform: uppercase;
       letter-spacing: 0.04em;
@@ -577,8 +591,9 @@
     }
 
     .no-results h3 {
-      font-family: var(--font-title);
+      font-family: var(--font-display);
       font-size: 1.25rem;
+      font-weight: 400;
       color: var(--text-ivory);
       margin-bottom: 6px;
     }
