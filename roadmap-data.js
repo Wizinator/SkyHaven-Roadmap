@@ -341,7 +341,7 @@ const ROADMAP_DATA = {
       tagline: "Future expansions, dungeons, pets, and community suggestions",
       status: "planned",
       completionPercentage: 0,
-      description: "SkyHaven is an ever-expanding world in active development. Beyond the milestones listed on this roadmap, we have big plans for future updates — including uncharted sky biomes, storm dungeons, world bosses, companion pets, island visiting permissions, and player-driven trade economies.",
+      description: "SkyHaven is an ever-expanding world in active development. Beyond the milestones listed on this roadmap, we have big plans for future updates including uncharted sky biomes, storm dungeons, world bosses, companion pets, island visiting permissions, and player-driven trade economies.",
       features: []
     }
   ]

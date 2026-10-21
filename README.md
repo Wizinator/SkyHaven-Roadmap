@@ -101,7 +101,7 @@ Development Progress: [███████████░░░░░░░░
 
 ## 🚀 10. More to Come
 
-SkyHaven is an ever-expanding world in active development. Beyond the milestones listed on this roadmap, we have big plans for future updates — including uncharted sky biomes, storm dungeons, world bosses, companion pets, island visiting permissions, and player-driven trade economies.
+SkyHaven is an ever-expanding world in active development. Beyond the milestones listed on this roadmap, we have big plans for future updates including uncharted sky biomes, storm dungeons, world bosses, companion pets, island visiting permissions, and player-driven trade economies.
 
 We shape the game based on what players love most. If you have suggestions, feature requests, or cool ideas for what should come next, join our Discord and help us build the ultimate skyblock experience!
 
