@@ -4,36 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SkyHaven — Game Roadmap</title>
-  <meta name="description" content="Official development roadmap for SkyHaven on Roblox. See completed features, what is in progress, and upcoming updates.">
+  <meta name="description" content="Official development roadmap for SkyHaven on Roblox. Explore features across Building, Farming, Villagers, Automation, Biomes, and Trading.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      --bg: #0c121d;
-      --surface: #141c2b;
-      --surface-card: #192437;
-      --surface-hover: #202d45;
-      --border: #24344e;
-      --border-light: #304467;
-      --text: #f1f5f9;
-      --text-muted: #94a3b8;
-      --text-dim: #64748b;
-      --primary: #38bdf8;
+      --font-title: 'Cinzel', Georgia, 'Times New Roman', serif;
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       
-      /* In-game UI colors: vibrant olive green & warm amber */
-      --status-done-bg: rgba(150, 188, 54, 0.15);
-      --status-done-text: #96bc36;
-      --status-done-border: rgba(150, 188, 54, 0.4);
+      /* In-game Wood Frame Palette (Sampled directly from game UI frame) */
+      --bg-deep: #1e1109;
+      --bg-wood: #2f1b10;
+      --wood-card: #422718;
+      --wood-card-inner: #361f13;
+      --wood-card-hover: #4e2e1c;
+      --wood-border: #633c23;
+      --wood-border-light: #7c4c2d;
 
-      --status-wip-bg: rgba(220, 130, 40, 0.15);
-      --status-wip-text: #dc8228;
-      --status-wip-border: rgba(220, 130, 40, 0.4);
+      /* Cream / Warm Ivory Text & Dividers from Game UI */
+      --text-ivory: #faecd0;
+      --text-cream: #ecd8b9;
+      --text-tan: #cfb594;
+      --text-muted: #a3896f;
+      --divider-gold: #cfa876;
 
-      --status-planned-bg: rgba(148, 163, 184, 0.12);
-      --status-planned-text: #94a3b8;
-      --status-planned-border: rgba(148, 163, 184, 0.25);
+      /* Badges */
+      --badge-done-bg: #273811;
+      --badge-done-text: #b6e459;
+      --badge-done-border: #4d6f22;
+
+      --badge-wip-bg: #472608;
+      --badge-wip-text: #f5a638;
+      --badge-wip-border: #804a18;
+
+      --badge-planned-bg: #2c1e17;
+      --badge-planned-text: #bcaaa0;
+      --badge-planned-border: #523b2f;
 
       --radius: 8px;
     }
@@ -45,28 +52,32 @@
     }
 
     body {
-      font-family: var(--font);
-      background-color: var(--bg);
-      color: var(--text);
+      font-family: var(--font-body);
+      background-color: var(--bg-deep);
+      background-image: 
+        radial-gradient(ellipse at 50% 0%, rgba(100, 60, 35, 0.35) 0%, transparent 70%),
+        linear-gradient(180deg, #24140b 0%, #1e1109 400px, #170c06 100%);
+      color: var(--text-cream);
       line-height: 1.5;
       min-height: 100vh;
-      padding-bottom: 60px;
+      padding-bottom: 70px;
     }
 
     .container {
-      max-width: 1060px;
+      max-width: 1080px;
       margin: 0 auto;
       padding: 0 20px;
     }
 
     /* ─── Header ─── */
     .site-header {
-      background: #090e18;
-      border-bottom: 1px solid var(--border);
+      background: #1a0f07;
+      border-bottom: 2px solid var(--wood-border);
       padding: 14px 0;
       position: sticky;
       top: 0;
       z-index: 50;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
     }
 
     .header-inner {
@@ -79,15 +90,15 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       text-decoration: none;
-      color: #fff;
     }
 
     .brand-icon {
-      width: 32px;
-      height: 32px;
-      background: #96bc36;
+      width: 34px;
+      height: 34px;
+      background: linear-gradient(135deg, #7c4c2d, #422718);
+      border: 1px solid var(--divider-gold);
       border-radius: var(--radius);
       display: flex;
       align-items: center;
@@ -97,22 +108,28 @@
     .brand-icon svg {
       width: 18px;
       height: 18px;
-      color: #fff;
+      color: var(--text-ivory);
     }
 
     .brand-title {
-      font-size: 1.15rem;
+      font-family: var(--font-title);
+      font-size: 1.35rem;
       font-weight: 700;
+      color: var(--text-ivory);
+      letter-spacing: 0.04em;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
     }
 
     .brand-tag {
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: #96bc36;
-      background: rgba(150, 188, 54, 0.12);
-      border: 1px solid rgba(150, 188, 54, 0.3);
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--text-ivory);
+      background: rgba(207, 168, 118, 0.15);
+      border: 1px solid var(--divider-gold);
       padding: 2px 8px;
       border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
     }
 
     .nav-actions {
@@ -120,81 +137,90 @@
       gap: 10px;
     }
 
-    .btn-nav {
+    .btn-wood {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 6px 14px;
-      font-size: 0.85rem;
+      padding: 7px 14px;
+      font-size: 0.84rem;
       font-weight: 600;
-      color: var(--text);
-      background: var(--surface);
-      border: 1px solid var(--border);
+      color: var(--text-ivory);
+      background: var(--wood-card);
+      border: 1px solid var(--wood-border);
       border-radius: var(--radius);
       text-decoration: none;
-      transition: background 0.15s;
+      transition: all 0.15s;
     }
 
-    .btn-nav:hover {
-      background: var(--surface-hover);
-      border-color: var(--border-light);
+    .btn-wood:hover {
+      background: var(--wood-card-hover);
+      border-color: var(--divider-gold);
+      color: #fff;
     }
 
     /* ─── Hero ─── */
     .hero {
-      padding: 36px 0 24px;
+      padding: 40px 0 24px;
       text-align: center;
     }
 
     .hero h1 {
-      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      font-family: var(--font-title);
+      font-size: clamp(2rem, 4vw, 2.85rem);
       font-weight: 700;
-      color: #fff;
+      color: var(--text-ivory);
       margin-bottom: 8px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+      letter-spacing: 0.03em;
     }
 
     .hero p {
-      font-size: 1rem;
-      color: var(--text-muted);
-      max-width: 580px;
-      margin: 0 auto 24px;
+      font-size: 1.02rem;
+      color: var(--text-tan);
+      max-width: 600px;
+      margin: 0 auto 28px;
     }
 
-    /* Overall Progress Box */
-    .progress-box {
-      background: var(--surface);
-      border: 1px solid var(--border);
+    /* Wood Progress Frame */
+    .progress-frame {
+      background: var(--wood-card-inner);
+      border: 2px solid var(--wood-border);
+      box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.5), 0 4px 12px rgba(0, 0, 0, 0.3);
       border-radius: var(--radius);
-      padding: 16px 20px;
-      max-width: 680px;
+      padding: 18px 24px;
+      max-width: 720px;
       margin: 0 auto;
       text-align: left;
     }
 
-    .progress-box-top {
+    .progress-frame-top {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .progress-title {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--text);
+      font-family: var(--font-title);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-ivory);
+      letter-spacing: 0.04em;
     }
 
     .progress-pct {
-      font-size: 1.15rem;
+      font-family: var(--font-title);
+      font-size: 1.25rem;
       font-weight: 700;
-      color: #96bc36;
+      color: var(--badge-done-text);
     }
 
     .progress-track {
       width: 100%;
-      height: 8px;
-      background: #090e18;
-      border-radius: 4px;
+      height: 10px;
+      background: #1b1008;
+      border: 1px solid var(--wood-border);
+      border-radius: 5px;
       overflow: hidden;
       margin-bottom: 12px;
     }
@@ -202,7 +228,7 @@
     .progress-fill {
       height: 100%;
       width: 56%;
-      background: #96bc36;
+      background: linear-gradient(90deg, #7da732, #b6e459);
       border-radius: 4px;
     }
 
@@ -210,19 +236,19 @@
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--text-tan);
+      border-top: 1px solid var(--wood-border);
       padding-top: 10px;
     }
 
     .stats-summary strong {
-      color: #fff;
+      color: var(--text-ivory);
     }
 
-    /* ─── Search & Filter Controls ─── */
+    /* ─── Search & Tabs ─── */
     .controls-row {
-      margin: 28px 0 32px;
+      margin: 32px 0;
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
@@ -232,35 +258,39 @@
 
     .search-input-wrap {
       flex: 1;
-      min-width: 240px;
-      max-width: 420px;
+      min-width: 250px;
+      max-width: 440px;
       position: relative;
     }
 
     .search-input-wrap input {
       width: 100%;
-      padding: 9px 12px 9px 34px;
-      background: var(--surface);
-      border: 1px solid var(--border);
+      padding: 10px 14px 10px 38px;
+      background: var(--wood-card-inner);
+      border: 1px solid var(--wood-border);
       border-radius: var(--radius);
-      color: #fff;
+      color: var(--text-ivory);
       font-family: inherit;
-      font-size: 0.88rem;
+      font-size: 0.9rem;
       outline: none;
     }
 
     .search-input-wrap input:focus {
-      border-color: #96bc36;
+      border-color: var(--divider-gold);
+    }
+
+    .search-input-wrap input::placeholder {
+      color: var(--text-muted);
     }
 
     .search-icon {
       position: absolute;
-      left: 11px;
+      left: 12px;
       top: 50%;
       transform: translateY(-50%);
-      color: var(--text-dim);
-      width: 15px;
-      height: 15px;
+      color: var(--text-muted);
+      width: 16px;
+      height: 16px;
       pointer-events: none;
     }
 
@@ -271,82 +301,143 @@
     }
 
     .tab-btn {
-      padding: 7px 13px;
-      font-size: 0.82rem;
-      font-weight: 600;
+      padding: 8px 14px;
+      font-size: 0.84rem;
+      font-weight: 700;
       font-family: inherit;
-      color: var(--text-muted);
-      background: var(--surface);
-      border: 1px solid var(--border);
+      color: var(--text-tan);
+      background: var(--wood-card-inner);
+      border: 1px solid var(--wood-border);
       border-radius: var(--radius);
       cursor: pointer;
       transition: all 0.15s;
     }
 
     .tab-btn:hover {
-      background: var(--surface-hover);
-      color: #fff;
+      background: var(--wood-card);
+      color: var(--text-ivory);
+      border-color: var(--divider-gold);
     }
 
     .tab-btn.active {
-      background: #1e2a3d;
-      color: #fff;
-      border-color: #96bc36;
+      background: var(--wood-card);
+      color: var(--text-ivory);
+      border-color: var(--divider-gold);
+      box-shadow: inset 0 0 8px rgba(207, 168, 118, 0.25);
     }
 
-    /* ─── Phases ─── */
-    .phases-wrap {
+    /* ─── Categorized Sections (In-game UI frame style) ─── */
+    .categories-wrap {
       display: flex;
       flex-direction: column;
-      gap: 36px;
+      gap: 40px;
     }
 
-    .phase-block {
-      background: var(--surface);
-      border: 1px solid var(--border);
+    .category-section {
+      background: var(--wood-card-inner);
+      border: 2px solid var(--wood-border);
+      box-shadow: inset 0 1px 3px rgba(255, 235, 205, 0.05), 0 4px 16px rgba(0, 0, 0, 0.35);
       border-radius: var(--radius);
-      padding: 20px;
+      padding: 24px;
     }
 
-    .phase-header {
+    /* Decorative Game Divider Header (Matching Image) */
+    .category-divider-header {
       display: flex;
-      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .divider-line {
+      flex: 1;
+      height: 2px;
+      background: var(--divider-gold);
+      opacity: 0.85;
+      position: relative;
+    }
+
+    .divider-diamond {
+      width: 8px;
+      height: 8px;
+      background: var(--text-ivory);
+      transform: rotate(45deg);
+      border: 1px solid var(--divider-gold);
+      flex-shrink: 0;
+    }
+
+    .category-title {
+      font-family: var(--font-title);
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--text-ivory);
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Feature Cards */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 14px;
+    }
+
+    .feature-card {
+      background: var(--wood-card);
+      border: 1px solid var(--wood-border);
+      border-radius: var(--radius);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+      transition: all 0.15s ease;
+    }
+
+    .feature-card:hover {
+      background: var(--wood-card-hover);
+      border-color: var(--wood-border-light);
+      transform: translateY(-2px);
+    }
+
+    .feature-card.is-hidden {
+      display: none !important;
+    }
+
+    .card-top {
+      display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 10px;
-      margin-bottom: 16px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--border);
+      gap: 8px;
+      margin-bottom: 8px;
     }
 
-    .phase-title-wrap {
-      display: flex;
-      align-items: baseline;
-      gap: 10px;
-    }
-
-    .phase-badge-num {
-      font-size: 0.78rem;
+    .badge-subcat {
+      font-size: 0.7rem;
       font-weight: 700;
-      color: var(--text-dim);
-      background: #090e18;
-      padding: 2px 7px;
-      border-radius: 4px;
+      color: var(--text-tan);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
 
-    .phase-title-text {
-      font-size: 1.15rem;
+    .feature-card h3 {
+      font-family: var(--font-title);
+      font-size: 1.05rem;
       font-weight: 700;
-      color: #fff;
+      color: var(--text-ivory);
+      margin-bottom: 6px;
+      line-height: 1.35;
+      letter-spacing: 0.02em;
     }
 
-    .phase-desc {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      margin-top: 2px;
+    .feature-card p {
+      font-size: 0.88rem;
+      color: var(--text-tan);
+      line-height: 1.45;
     }
 
-    /* Status Badges */
+    /* Badges */
     .badge {
       display: inline-flex;
       align-items: center;
@@ -359,99 +450,46 @@
     }
 
     .badge-done {
-      background: var(--status-done-bg);
-      color: var(--status-done-text);
-      border: 1px solid var(--status-done-border);
+      background: var(--badge-done-bg);
+      color: var(--badge-done-text);
+      border: 1px solid var(--badge-done-border);
     }
 
     .badge-wip {
-      background: var(--status-wip-bg);
-      color: var(--status-wip-text);
-      border: 1px solid var(--status-wip-border);
+      background: var(--badge-wip-bg);
+      color: var(--badge-wip-text);
+      border: 1px solid var(--badge-wip-border);
     }
 
     .badge-planned {
-      background: var(--status-planned-bg);
-      color: var(--status-planned-text);
-      border: 1px solid var(--status-planned-border);
-    }
-
-    /* Feature Grid */
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 12px;
-    }
-
-    .feature-card {
-      background: var(--surface-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 14px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .feature-card:hover {
-      border-color: var(--border-light);
-    }
-
-    .feature-card.is-hidden {
-      display: none !important;
-    }
-
-    .card-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 6px;
-    }
-
-    .category-label {
-      font-size: 0.7rem;
-      font-weight: 700;
-      color: #7892b8;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
-    .feature-card h3 {
-      font-size: 0.98rem;
-      font-weight: 600;
-      color: #fff;
-      margin-bottom: 4px;
-      line-height: 1.35;
-    }
-
-    .feature-card p {
-      font-size: 0.84rem;
-      color: var(--text-muted);
-      line-height: 1.45;
+      background: var(--badge-planned-bg);
+      color: var(--badge-planned-text);
+      border: 1px solid var(--badge-planned-border);
     }
 
     /* Empty state */
     .no-results {
       text-align: center;
-      padding: 40px 20px;
-      color: var(--text-muted);
+      padding: 48px 20px;
+      color: var(--text-tan);
       display: none;
     }
 
     .no-results h3 {
-      font-size: 1.1rem;
-      color: #fff;
-      margin-bottom: 4px;
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      color: var(--text-ivory);
+      margin-bottom: 6px;
     }
 
     /* Footer */
     .site-footer {
-      border-top: 1px solid var(--border);
-      background: #090e18;
-      padding: 24px 0;
-      margin-top: 50px;
-      font-size: 0.82rem;
-      color: var(--text-muted);
+      border-top: 2px solid var(--wood-border);
+      background: #140b05;
+      padding: 28px 0;
+      margin-top: 60px;
+      font-size: 0.85rem;
+      color: var(--text-tan);
     }
 
     .footer-inner {
@@ -459,26 +497,27 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
     }
 
     .footer-links a {
-      color: var(--text-muted);
+      color: var(--text-ivory);
       text-decoration: none;
-      margin-left: 14px;
+      margin-left: 16px;
     }
 
     .footer-links a:hover {
-      color: #fff;
+      color: var(--divider-gold);
     }
 
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 1.6rem; }
+    @media (max-width: 650px) {
+      .hero h1 { font-size: 1.8rem; }
+      .category-title { font-size: 1.2rem; }
       .features-grid { grid-template-columns: 1fr; }
       .controls-row { flex-direction: column; align-items: stretch; }
       .search-input-wrap { max-width: 100%; }
       .tab-buttons { width: 100%; }
-      .tab-btn { flex: 1; text-align: center; }
+      .tab-btn { flex: 1; text-align: center; font-size: 0.78rem; padding: 7px 8px; }
     }
   </style>
 </head>
@@ -498,10 +537,10 @@
       </a>
 
       <div class="nav-actions">
-        <a href="https://github.com/Wizinator/SkyHaven-Roadmap/issues" target="_blank" rel="noopener noreferrer" class="btn-nav">
+        <a href="https://github.com/Wizinator/SkyHaven-Roadmap/issues" target="_blank" rel="noopener noreferrer" class="btn-wood">
           Suggest a Feature
         </a>
-        <a href="https://github.com/Wizinator/SkyHaven-Roadmap" target="_blank" rel="noopener noreferrer" class="btn-nav">
+        <a href="https://github.com/Wizinator/SkyHaven-Roadmap" target="_blank" rel="noopener noreferrer" class="btn-wood">
           GitHub
         </a>
       </div>
@@ -512,11 +551,11 @@
     <!-- Hero / Progress -->
     <section class="hero">
       <h1>Game Progress & Roadmap</h1>
-      <p>Here is what is currently in the game and what is coming in future updates.</p>
+      <p>Explore what is complete in the game, in active development, and planned for future updates.</p>
 
-      <div class="progress-box">
-        <div class="progress-box-top">
-          <span class="progress-title">Overall Development</span>
+      <div class="progress-frame">
+        <div class="progress-frame-top">
+          <span class="progress-title">Overall Game Development</span>
           <span class="progress-pct">56% Complete</span>
         </div>
         <div class="progress-track">
@@ -531,14 +570,14 @@
       </div>
     </section>
 
-    <!-- Controls -->
+    <!-- Controls (Search & Status Tabs) -->
     <section class="controls-row">
       <div class="search-input-wrap">
         <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="11" cy="11" r="8"></circle>
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
-        <input type="text" id="searchInput" placeholder="Search features (crops, villagers, pipes, biomes...)" autocomplete="off">
+        <input type="text" id="searchInput" placeholder="Search features (stairs, crops, villagers, biomes...)" autocomplete="off">
       </div>
 
       <div class="tab-buttons">
@@ -549,26 +588,23 @@
       </div>
     </section>
 
-    <!-- Pre-rendered Phases -->
-    <div id="phasesContainer" class="phases-wrap">
+    <!-- Categorized Roadmap Sections (Fully Pre-rendered) -->
+    <div id="categoriesContainer" class="categories-wrap">
 
-      <!-- Phase 1: Building & Island Basics (COMPLETE) -->
-      <section class="phase-block" data-phase="1">
-        <div class="phase-header">
-          <div>
-            <div class="phase-title-wrap">
-              <span class="phase-badge-num">Phase 1</span>
-              <h2 class="phase-title-text">Building & Island Basics</h2>
-            </div>
-            <p class="phase-desc">The core systems for building and saving your island</p>
-          </div>
-          <span class="badge badge-done">Complete</span>
+      <!-- 1. Building & Islands -->
+      <section class="category-section" data-cat="building">
+        <div class="category-divider-header">
+          <div class="divider-diamond"></div>
+          <div class="divider-line"></div>
+          <h2 class="category-title">Building & Islands</h2>
+          <div class="divider-line"></div>
+          <div class="divider-diamond"></div>
         </div>
 
         <div class="features-grid">
-          <div class="feature-card" data-status="completed" data-search="block placement building grid">
+          <div class="feature-card" data-status="completed" data-search="block placement building grid floating island">
             <div class="card-top">
-              <span class="category-label">Building</span>
+              <span class="badge-subcat">Placement</span>
               <span class="badge badge-done">Complete</span>
             </div>
             <h3>Block Placement & Building</h3>
@@ -577,7 +613,7 @@
 
           <div class="feature-card" data-status="completed" data-search="smart stairs corner connect placement building">
             <div class="card-top">
-              <span class="category-label">Building</span>
+              <span class="badge-subcat">Building</span>
               <span class="badge badge-done">Complete</span>
             </div>
             <h3>Smart Stairs</h3>
@@ -586,7 +622,7 @@
 
           <div class="feature-card" data-status="completed" data-search="40k block limit island capacity budget building">
             <div class="card-top">
-              <span class="category-label">Building</span>
+              <span class="badge-subcat">Limit</span>
               <span class="badge badge-done">Complete</span>
             </div>
             <h3>40k Block Limit</h3>
@@ -595,59 +631,47 @@
 
           <div class="feature-card" data-status="completed" data-search="lag free block optimization performance greedy mesher">
             <div class="card-top">
-              <span class="category-label">Performance</span>
+              <span class="badge-subcat">Optimization</span>
               <span class="badge badge-done">Complete</span>
             </div>
             <h3>Lag-Free Block Optimization</h3>
             <p>Adjacent blocks automatically merge together behind the scenes, keeping the game smooth even with huge islands.</p>
           </div>
 
-          <div class="feature-card" data-status="completed" data-search="streaming enabled performance chunks rendering">
+          <div class="feature-card" data-status="completed" data-search="backpack hotbar inventory ui items tools">
             <div class="card-top">
-              <span class="category-label">Performance</span>
-              <span class="badge badge-done">Complete</span>
-            </div>
-            <h3>Streaming Enabled</h3>
-            <p>Smart object streaming so dense islands, massive builds, and machines load smoothly without crashing or lagging.</p>
-          </div>
-
-          <div class="feature-card" data-status="completed" data-search="mobile support touch controls hotbar phones tablets">
-            <div class="card-top">
-              <span class="category-label">Controls</span>
-              <span class="badge badge-done">Complete</span>
-            </div>
-            <h3>Full Mobile Support</h3>
-            <p>Full touch controls and mobile UI for phones and tablets, including quick hotbar switching and tap-to-harvest prompts.</p>
-          </div>
-
-          <div class="feature-card" data-status="completed" data-search="backpack hotbar inventory ui items">
-            <div class="card-top">
-              <span class="category-label">Inventory</span>
+              <span class="badge-subcat">Interface</span>
               <span class="badge badge-done">Complete</span>
             </div>
             <h3>Backpack & Hotbar</h3>
             <p>Clean inventory menu with item categories and a quick hotbar to switch tools easily.</p>
           </div>
+
+          <div class="feature-card" data-status="planned" data-search="airship skins banners decorations cosmetics flags lanterns paint">
+            <div class="card-top">
+              <span class="badge-subcat">Customization</span>
+              <span class="badge badge-planned">Planned</span>
+            </div>
+            <h3>Airship Skins & Banners</h3>
+            <p>Customize your island with decorative flags, lanterns, and paint colors for your airship.</p>
+          </div>
         </div>
       </section>
 
-      <!-- Phase 2: Farming & Mining (COMPLETE) -->
-      <section class="phase-block" data-phase="2">
-        <div class="phase-header">
-          <div>
-            <div class="phase-title-wrap">
-              <span class="phase-badge-num">Phase 2</span>
-              <h2 class="phase-title-text">Farming, Nature & Mining</h2>
-            </div>
-            <p class="phase-desc">Crops, orchards, berry bushes, ores, and atmosphere</p>
-          </div>
-          <span class="badge badge-done">Complete</span>
+      <!-- 2. Farming, Trees & Nature -->
+      <section class="category-section" data-cat="farming">
+        <div class="category-divider-header">
+          <div class="divider-diamond"></div>
+          <div class="divider-line"></div>
+          <h2 class="category-title">Farming & Nature</h2>
+          <div class="divider-line"></div>
+          <div class="divider-diamond"></div>
         </div>
 
         <div class="features-grid">
           <div class="feature-card" data-status="completed" data-search="multiple crops trees bushes wheat tomato carrot potato birch pine apple lemon blueberry raspberry">
             <div class="card-top">
-              <span class="category-label">Farming</span>
+              <span class="badge-subcat">Agriculture</span>
               <span class="badge badge-done">Complete</span>
             </div>
             <h3>Crops, Trees & Bushes</h3>
@@ -656,50 +680,87 @@
 
           <div class="feature-card" data-status="completed" data-search="watering cans sickles hoe tools farming crop growth">
             <div class="card-top">
-              <span class="category-label">Farming</span>
+              <span class="category-label badge-subcat">Tools</span>
               <span class="badge badge-done">Complete</span>
             </div>
             <h3>Watering Cans & Sickles</h3>
             <p>Till dirt with a hoe, speed up crop growth with watering cans, and harvest faster using tiered sickles.</p>
           </div>
 
+          <div class="feature-card" data-status="completed" data-search="day night cycle sky atmosphere lighting wind celestial">
+            <div class="card-top">
+              <span class="badge-subcat">World</span>
+              <span class="badge badge-done">Complete</span>
+            </div>
+            <h3>Day & Night Cycle</h3>
+            <p>Dynamic daylight, glowing twilight sunsets, and starry nights with soft wind effects across the sky.</p>
+          </div>
+
+          <div class="feature-card" data-status="planned" data-search="farm animals chickens sheep cows livestock ranching pasture">
+            <div class="card-top">
+              <span class="badge-subcat">Animals</span>
+              <span class="badge badge-planned">Planned</span>
+            </div>
+            <h3>Farm Animals</h3>
+            <p>Raise chickens for eggs, sheep for wool, and cows for milk in fenced pastures on your island.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Mining & Tools -->
+      <section class="category-section" data-cat="mining">
+        <div class="category-divider-header">
+          <div class="divider-diamond"></div>
+          <div class="divider-line"></div>
+          <h2 class="category-title">Mining & Tools</h2>
+          <div class="divider-line"></div>
+          <div class="divider-diamond"></div>
+        </div>
+
+        <div class="features-grid">
           <div class="feature-card" data-status="completed" data-search="ore nodes pickaxes mining stone coal iron gold resources">
             <div class="card-top">
-              <span class="category-label">Mining</span>
+              <span class="badge-subcat">Mining</span>
               <span class="badge badge-done">Complete</span>
             </div>
             <h3>Ore Nodes & Pickaxes</h3>
             <p>Mine stone, coal, iron, and gold nodes that spawn around your island using tiered pickaxes.</p>
           </div>
 
-          <div class="feature-card" data-status="completed" data-search="day night cycle sky atmosphere lighting wind celestial">
+          <div class="feature-card" data-status="completed" data-search="player skills leveling xp levels farming mining woodcutting">
             <div class="card-top">
-              <span class="category-label">World</span>
+              <span class="badge-subcat">Skills</span>
               <span class="badge badge-done">Complete</span>
             </div>
-            <h3>Day & Night Cycle</h3>
-            <p>Dynamic daylight, glowing twilight sunsets, and starry nights with soft wind effects across the sky.</p>
+            <h3>Player Skills & Leveling</h3>
+            <p>Level up your Farming, Mining, and Woodcutting skills to unlock better tools, faster speeds, and rare seeds.</p>
+          </div>
+
+          <div class="feature-card" data-status="in-progress" data-search="tool animations custom swings mining chopping till physics spring">
+            <div class="card-top">
+              <span class="badge-subcat">Animation</span>
+              <span class="badge badge-wip">In Progress</span>
+            </div>
+            <h3>Tool Animations</h3>
+            <p>Custom swing, till, chop, and mining animations with smooth spring physics for all tools.</p>
           </div>
         </div>
       </section>
 
-      <!-- Phase 3: Storage & Crafting (COMPLETE) -->
-      <section class="phase-block" data-phase="3">
-        <div class="phase-header">
-          <div>
-            <div class="phase-title-wrap">
-              <span class="phase-badge-num">Phase 3</span>
-              <h2 class="phase-title-text">Storage & Crafting</h2>
-            </div>
-            <p class="phase-desc">Chests, crafting workstations, furnaces, and item physics</p>
-          </div>
-          <span class="badge badge-done">Complete</span>
+      <!-- 4. Storage & Workstations -->
+      <section class="category-section" data-cat="storage">
+        <div class="category-divider-header">
+          <div class="divider-diamond"></div>
+          <div class="divider-line"></div>
+          <h2 class="category-title">Storage & Workstations</h2>
+          <div class="divider-line"></div>
+          <div class="divider-diamond"></div>
         </div>
 
         <div class="features-grid">
           <div class="feature-card" data-status="completed" data-search="multiple chests storage automated normal containers">
             <div class="card-top">
-              <span class="category-label">Storage</span>
+              <span class="badge-subcat">Storage</span>
               <span class="badge badge-done">Complete</span>
             </div>
             <h3>Multiple Chests</h3>
@@ -708,7 +769,7 @@
 
           <div class="feature-card" data-status="completed" data-search="crafting workstations tables benches recipes parts tools">
             <div class="card-top">
-              <span class="category-label">Crafting</span>
+              <span class="badge-subcat">Crafting</span>
               <span class="badge badge-done">Complete</span>
             </div>
             <h3>Crafting Workstations</h3>
@@ -717,7 +778,7 @@
 
           <div class="feature-card" data-status="completed" data-search="droppable items q f drop pick up controls physics">
             <div class="card-top">
-              <span class="category-label">Gameplay</span>
+              <span class="badge-subcat">Gameplay</span>
               <span class="badge badge-done">Complete</span>
             </div>
             <h3>Droppable Items (Q / F)</h3>
@@ -726,7 +787,7 @@
 
           <div class="feature-card" data-status="completed" data-search="safe inventory system anti dupe atomic storage">
             <div class="card-top">
-              <span class="category-label">Inventory</span>
+              <span class="badge-subcat">Inventory</span>
               <span class="badge badge-done">Complete</span>
             </div>
             <h3>Safe Inventory System</h3>
@@ -735,32 +796,38 @@
 
           <div class="feature-card" data-status="completed" data-search="furnaces composters smelting ingots iron gold fertilizer">
             <div class="card-top">
-              <span class="category-label">Crafting</span>
+              <span class="badge-subcat">Processing</span>
               <span class="badge badge-done">Complete</span>
             </div>
             <h3>Furnaces & Composters</h3>
             <p>Smelt raw iron and gold into ingots, or turn organic scraps into fertilizer to speed up crops.</p>
           </div>
+
+          <div class="feature-card" data-status="in-progress" data-search="industrial equipment smelters stonecutters fabricators machines automation">
+            <div class="card-top">
+              <span class="badge-subcat">Machinery</span>
+              <span class="badge badge-wip">In Progress</span>
+            </div>
+            <h3>Industrial Equipment</h3>
+            <p>Heavy-duty processing machines including advanced smelters, stonecutters, and high-throughput fabricators.</p>
+          </div>
         </div>
       </section>
 
-      <!-- Phase 4: Villagers & Factory Automation (COMPLETE) -->
-      <section class="phase-block" data-phase="4">
-        <div class="phase-header">
-          <div>
-            <div class="phase-title-wrap">
-              <span class="phase-badge-num">Phase 4</span>
-              <h2 class="phase-title-text">Villagers & Factory Automation</h2>
-            </div>
-            <p class="phase-desc">Helpers, dwarf workers, pipes, skills, and personal airships</p>
-          </div>
-          <span class="badge badge-done">Complete</span>
+      <!-- 5. Villagers & Helpers -->
+      <section class="category-section" data-cat="villagers">
+        <div class="category-divider-header">
+          <div class="divider-diamond"></div>
+          <div class="divider-line"></div>
+          <h2 class="category-title">Villagers & Helpers</h2>
+          <div class="divider-line"></div>
+          <div class="divider-diamond"></div>
         </div>
 
         <div class="features-grid">
           <div class="feature-card" data-status="completed" data-search="villager helpers farmer miner bed npc autonomous">
             <div class="card-top">
-              <span class="category-label">Villagers</span>
+              <span class="badge-subcat">Helpers</span>
               <span class="badge badge-done">Complete</span>
             </div>
             <h3>Villager Helpers</h3>
@@ -769,7 +836,7 @@
 
           <div class="feature-card" data-status="completed" data-search="villager dwarfs helpers single tasks harvesting hauling worker">
             <div class="card-top">
-              <span class="category-label">Villagers</span>
+              <span class="badge-subcat">Dwarfs</span>
               <span class="badge badge-done">Complete</span>
             </div>
             <h3>Villager Dwarfs</h3>
@@ -778,122 +845,16 @@
 
           <div class="feature-card" data-status="completed" data-search="smart villager walking ai pathfinding navigation stairs">
             <div class="card-top">
-              <span class="category-label">Villagers</span>
+              <span class="badge-subcat">AI</span>
               <span class="badge badge-done">Complete</span>
             </div>
             <h3>Smart Villager Walking</h3>
             <p>Villagers can walk up stairs, navigate around walls, and easily find their way around your builds.</p>
           </div>
 
-          <div class="feature-card" data-status="completed" data-search="factory transport pipes logistics glass items automation">
-            <div class="card-top">
-              <span class="category-label">Automation</span>
-              <span class="badge badge-done">Complete</span>
-            </div>
-            <h3>Factory Transport Pipes</h3>
-            <p>Connect machines, chests, and crops with pipes to move items around automatically. You can see items traveling inside.</p>
-          </div>
-
-          <div class="feature-card" data-status="completed" data-search="funnel pipes dropped items pickup pipe conversion automation">
-            <div class="card-top">
-              <span class="category-label">Automation</span>
-              <span class="badge badge-done">Complete</span>
-            </div>
-            <h3>Funnel Pipes</h3>
-            <p>Special funnel pipes that pick up dropped items from the ground and convert them into pipe transport items automatically.</p>
-          </div>
-
-          <div class="feature-card" data-status="completed" data-search="personal island airship dock transport travel">
-            <div class="card-top">
-              <span class="category-label">Travel</span>
-              <span class="badge badge-done">Complete</span>
-            </div>
-            <h3>Personal Island Airship</h3>
-            <p>Every island comes with a dock and an airship ready to take you into the skies.</p>
-          </div>
-
-          <div class="feature-card" data-status="completed" data-search="player skills leveling xp levels farming mining woodcutting">
-            <div class="card-top">
-              <span class="category-label">Progression</span>
-              <span class="badge badge-done">Complete</span>
-            </div>
-            <h3>Player Skills & Leveling</h3>
-            <p>Level up your Farming, Mining, and Woodcutting skills to unlock better tools, faster speeds, and rare seeds.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Phase 5: In Active Development (IN PROGRESS) -->
-      <section class="phase-block" data-phase="5">
-        <div class="phase-header">
-          <div>
-            <div class="phase-title-wrap">
-              <span class="phase-badge-num">Phase 5</span>
-              <h2 class="phase-title-text">In Active Development</h2>
-            </div>
-            <p class="phase-desc">Features currently being coded, built, and tested</p>
-          </div>
-          <span class="badge badge-wip">In Progress</span>
-        </div>
-
-        <div class="features-grid">
-          <div class="feature-card" data-status="in-progress" data-search="biome 1 golem paradise stone golems ruins exploration sky island">
-            <div class="card-top">
-              <span class="category-label">Biomes</span>
-              <span class="badge badge-wip">In Progress</span>
-            </div>
-            <h3>Biome 1: Golem Paradise</h3>
-            <p>A mysterious sky biome filled with ancient stone golems, ruins, and rare resources to explore.</p>
-          </div>
-
-          <div class="feature-card" data-status="in-progress" data-search="biome 2 the wetlands swamp flora clay deposits humid weather">
-            <div class="card-top">
-              <span class="category-label">Biomes</span>
-              <span class="badge badge-wip">In Progress</span>
-            </div>
-            <h3>Biome 2: The Wetlands</h3>
-            <p>A lush, misty swamp island biome featuring waterlogged flora, rich clay deposits, and humid weather.</p>
-          </div>
-
-          <div class="feature-card" data-status="in-progress" data-search="industrial equipment smelters stonecutters fabricators machines automation">
-            <div class="card-top">
-              <span class="category-label">Automation</span>
-              <span class="badge badge-wip">In Progress</span>
-            </div>
-            <h3>Industrial Equipment</h3>
-            <p>Heavy-duty processing machines including advanced smelters, stonecutters, and high-throughput fabricators.</p>
-          </div>
-
-          <div class="feature-card" data-status="in-progress" data-search="onboarding player tutorial beginner guide quests hints">
-            <div class="card-top">
-              <span class="category-label">Gameplay</span>
-              <span class="badge badge-wip">In Progress</span>
-            </div>
-            <h3>Player Onboarding</h3>
-            <p>Interactive beginner tutorial, quest guidance, and hints to help new players get started on their island.</p>
-          </div>
-
-          <div class="feature-card" data-status="in-progress" data-search="server load testing players per server performance stress test">
-            <div class="card-top">
-              <span class="category-label">Technical</span>
-              <span class="badge badge-wip">In Progress</span>
-            </div>
-            <h3>Server Load Testing</h3>
-            <p>Stress-testing server performance to find the optimal player count per server while keeping physics, villagers, and pipes at high FPS.</p>
-          </div>
-
-          <div class="feature-card" data-status="in-progress" data-search="vending machines trading player shops stalls market economy">
-            <div class="card-top">
-              <span class="category-label">Economy</span>
-              <span class="badge badge-wip">In Progress</span>
-            </div>
-            <h3>Vending Machines</h3>
-            <p>Placeable vending machine shops that allow visitors to buy and sell items on your island automatically.</p>
-          </div>
-
           <div class="feature-card" data-status="in-progress" data-search="warrior villager class combat guard defense patrol npcs">
             <div class="card-top">
-              <span class="category-label">Villagers</span>
+              <span class="badge-subcat">New Class</span>
               <span class="badge badge-wip">In Progress</span>
             </div>
             <h3>Warrior Villager Class</h3>
@@ -902,34 +863,96 @@
 
           <div class="feature-card" data-status="in-progress" data-search="gardener villager class flowers trees berry bushes prune npcs">
             <div class="card-top">
-              <span class="category-label">Villagers</span>
+              <span class="badge-subcat">New Class</span>
               <span class="badge badge-wip">In Progress</span>
             </div>
             <h3>Gardener Villager Class</h3>
             <p>Specialized gardener NPCs that care for flower beds, prune fruit trees, and tend berry bushes.</p>
           </div>
+        </div>
+      </section>
 
-          <div class="feature-card" data-status="in-progress" data-search="tool animations custom swings mining chopping till physics">
+      <!-- 6. Factory Automation & Pipes -->
+      <section class="category-section" data-cat="automation">
+        <div class="category-divider-header">
+          <div class="divider-diamond"></div>
+          <div class="divider-line"></div>
+          <h2 class="category-title">Factory Automation</h2>
+          <div class="divider-line"></div>
+          <div class="divider-diamond"></div>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card" data-status="completed" data-search="factory transport pipes logistics glass items automation">
             <div class="card-top">
-              <span class="category-label">Animation</span>
-              <span class="badge badge-wip">In Progress</span>
+              <span class="badge-subcat">Pipes</span>
+              <span class="badge badge-done">Complete</span>
             </div>
-            <h3>Tool Animations</h3>
-            <p>Custom swing, till, chop, and mining animations with smooth spring physics for all tools.</p>
+            <h3>Factory Transport Pipes</h3>
+            <p>Connect machines, chests, and crops with pipes to move items around automatically. You can see items traveling inside.</p>
           </div>
 
-          <div class="feature-card" data-status="in-progress" data-search="coins currency gold money orders economy trading">
+          <div class="feature-card" data-status="completed" data-search="funnel pipes dropped items pickup pipe conversion automation">
             <div class="card-top">
-              <span class="category-label">Economy</span>
+              <span class="badge-subcat">Pipes</span>
+              <span class="badge badge-done">Complete</span>
+            </div>
+            <h3>Funnel Pipes</h3>
+            <p>Special funnel pipes that pick up dropped items from the ground and convert them into pipe transport items automatically.</p>
+          </div>
+
+          <div class="feature-card" data-status="planned" data-search="sprinklers auto harvesters automation machines conveyor sorters">
+            <div class="card-top">
+              <span class="badge-subcat">Machines</span>
+              <span class="badge badge-planned">Planned</span>
+            </div>
+            <h3>Sprinklers & Auto-Harvesters</h3>
+            <p>Build sprinkler systems to water whole fields at once, along with conveyor belts and sorters.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Biomes & World Exploration -->
+      <section class="category-section" data-cat="biomes">
+        <div class="category-divider-header">
+          <div class="divider-diamond"></div>
+          <div class="divider-line"></div>
+          <h2 class="category-title">Biomes & Exploration</h2>
+          <div class="divider-line"></div>
+          <div class="divider-diamond"></div>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card" data-status="completed" data-search="personal island airship dock transport travel">
+            <div class="card-top">
+              <span class="badge-subcat">Airship</span>
+              <span class="badge badge-done">Complete</span>
+            </div>
+            <h3>Personal Island Airship</h3>
+            <p>Every island comes with a dock and an airship ready to take you into the skies.</p>
+          </div>
+
+          <div class="feature-card" data-status="in-progress" data-search="biome 1 golem paradise stone golems ruins exploration sky island">
+            <div class="card-top">
+              <span class="badge-subcat">Biome</span>
               <span class="badge badge-wip">In Progress</span>
             </div>
-            <h3>Coins & Currency</h3>
-            <p>In-game economy with gold coins earned from selling crops, fulfilling island orders, and trading.</p>
+            <h3>Biome 1: Golem Paradise</h3>
+            <p>A mysterious sky biome filled with ancient stone golems, ruins, and rare resources to explore.</p>
+          </div>
+
+          <div class="feature-card" data-status="in-progress" data-search="biome 2 the wetlands swamp flora clay deposits humid weather">
+            <div class="card-top">
+              <span class="badge-subcat">Biome</span>
+              <span class="badge badge-wip">In Progress</span>
+            </div>
+            <h3>Biome 2: The Wetlands</h3>
+            <p>A lush, misty swamp island biome featuring waterlogged flora, rich clay deposits, and humid weather.</p>
           </div>
 
           <div class="feature-card" data-status="in-progress" data-search="visiting other islands multiplayer friends permissions block privacy">
             <div class="card-top">
-              <span class="category-label">Social</span>
+              <span class="badge-subcat">Multiplayer</span>
               <span class="badge badge-wip">In Progress</span>
             </div>
             <h3>Visiting Other Islands</h3>
@@ -938,32 +961,56 @@
 
           <div class="feature-card" data-status="in-progress" data-search="island previews snapshot inspection travel">
             <div class="card-top">
-              <span class="category-label">Social</span>
+              <span class="badge-subcat">Multiplayer</span>
               <span class="badge badge-wip">In Progress</span>
             </div>
             <h3>Island Previews</h3>
             <p>See a snapshot of an island and its owner's level before you fly there.</p>
           </div>
+
+          <div class="feature-card" data-status="planned" data-search="sky dungeons monsters storm islands combat bosses loot pve">
+            <div class="card-top">
+              <span class="badge-subcat">Combat</span>
+              <span class="badge badge-planned">Planned</span>
+            </div>
+            <h3>Sky Dungeons & Monsters</h3>
+            <p>Fly to mysterious storm islands with your friends to fight monsters, solve puzzles, and win rare loot.</p>
+          </div>
         </div>
       </section>
 
-      <!-- Phase 6: Planned Updates (PLANNED) -->
-      <section class="phase-block" data-phase="6">
-        <div class="phase-header">
-          <div>
-            <div class="phase-title-wrap">
-              <span class="phase-badge-num">Phase 6</span>
-              <h2 class="phase-title-text">Planned Updates</h2>
-            </div>
-            <p class="phase-desc">Upcoming community features, livestock, and expeditions</p>
-          </div>
-          <span class="badge badge-planned">Planned</span>
+      <!-- 8. Economy & Trading -->
+      <section class="category-section" data-cat="economy">
+        <div class="category-divider-header">
+          <div class="divider-diamond"></div>
+          <div class="divider-line"></div>
+          <h2 class="category-title">Economy & Trading</h2>
+          <div class="divider-line"></div>
+          <div class="divider-diamond"></div>
         </div>
 
         <div class="features-grid">
+          <div class="feature-card" data-status="in-progress" data-search="vending machines trading player shops stalls market economy">
+            <div class="card-top">
+              <span class="badge-subcat">Trading</span>
+              <span class="badge badge-wip">In Progress</span>
+            </div>
+            <h3>Vending Machines</h3>
+            <p>Placeable vending machine shops that allow visitors to buy and sell items on your island automatically.</p>
+          </div>
+
+          <div class="feature-card" data-status="in-progress" data-search="coins currency gold money orders economy trading">
+            <div class="card-top">
+              <span class="badge-subcat">Currency</span>
+              <span class="badge badge-wip">In Progress</span>
+            </div>
+            <h3>Coins & Currency</h3>
+            <p>In-game economy with gold coins earned from selling crops, fulfilling island orders, and trading.</p>
+          </div>
+
           <div class="feature-card" data-status="planned" data-search="public market hub central sky town merchants vendor">
             <div class="card-top">
-              <span class="category-label">Social</span>
+              <span class="badge-subcat">Social</span>
               <span class="badge badge-planned">Planned</span>
             </div>
             <h3>Public Market Hub</h3>
@@ -972,47 +1019,60 @@
 
           <div class="feature-card" data-status="planned" data-search="player to player trading stalls verified exchange economy">
             <div class="card-top">
-              <span class="category-label">Economy</span>
+              <span class="badge-subcat">Social</span>
               <span class="badge badge-planned">Planned</span>
             </div>
             <h3>Player-to-Player Trading</h3>
             <p>Trade items and resources safely with other players through a secure trade menu, or set up a stall on your island.</p>
           </div>
+        </div>
+      </section>
 
-          <div class="feature-card" data-status="planned" data-search="airship skins banners decorations cosmetics flags lanterns">
+      <!-- 9. Performance & Onboarding -->
+      <section class="category-section" data-cat="performance">
+        <div class="category-divider-header">
+          <div class="divider-diamond"></div>
+          <div class="divider-line"></div>
+          <h2 class="category-title">Performance & Onboarding</h2>
+          <div class="divider-line"></div>
+          <div class="divider-diamond"></div>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card" data-status="completed" data-search="mobile support touch controls hotbar phones tablets">
             <div class="card-top">
-              <span class="category-label">Building</span>
-              <span class="badge badge-planned">Planned</span>
+              <span class="badge-subcat">Controls</span>
+              <span class="badge badge-done">Complete</span>
             </div>
-            <h3>Airship Skins & Banners</h3>
-            <p>Customize your island with decorative flags, lanterns, and paint colors for your airship.</p>
+            <h3>Full Mobile Support</h3>
+            <p>Full touch controls and mobile UI for phones and tablets, including quick hotbar switching and tap-to-harvest prompts.</p>
           </div>
 
-          <div class="feature-card" data-status="planned" data-search="farm animals chickens sheep cows livestock ranching pasture">
+          <div class="feature-card" data-status="completed" data-search="streaming enabled performance chunks rendering">
             <div class="card-top">
-              <span class="category-label">Farming</span>
-              <span class="badge badge-planned">Planned</span>
+              <span class="badge-subcat">Engine</span>
+              <span class="badge badge-done">Complete</span>
             </div>
-            <h3>Farm Animals</h3>
-            <p>Raise chickens for eggs, sheep for wool, and cows for milk in fenced pastures on your island.</p>
+            <h3>Streaming Enabled</h3>
+            <p>Smart object streaming so dense islands, massive builds, and machines load smoothly without crashing or lagging.</p>
           </div>
 
-          <div class="feature-card" data-status="planned" data-search="sky dungeons monsters storm islands combat bosses loot pve">
+          <div class="feature-card" data-status="in-progress" data-search="onboarding player tutorial beginner guide quests hints">
             <div class="card-top">
-              <span class="category-label">Combat</span>
-              <span class="badge badge-planned">Planned</span>
+              <span class="badge-subcat">Guide</span>
+              <span class="badge badge-wip">In Progress</span>
             </div>
-            <h3>Sky Dungeons & Monsters</h3>
-            <p>Fly to mysterious storm islands with your friends to fight monsters, solve puzzles, and win rare loot.</p>
+            <h3>Player Onboarding</h3>
+            <p>Interactive beginner tutorial, quest guidance, and hints to help new players get started on their island.</p>
           </div>
 
-          <div class="feature-card" data-status="planned" data-search="sprinklers auto harvesters automation machines conveyor sorters">
+          <div class="feature-card" data-status="in-progress" data-search="server load testing players per server performance stress test">
             <div class="card-top">
-              <span class="category-label">Automation</span>
-              <span class="badge badge-planned">Planned</span>
+              <span class="badge-subcat">Optimization</span>
+              <span class="badge badge-wip">In Progress</span>
             </div>
-            <h3>Sprinklers & Auto-Harvesters</h3>
-            <p>Build sprinkler systems to water whole fields at once, along with conveyor belts and sorters.</p>
+            <h3>Server Load Testing</h3>
+            <p>Stress-testing server performance to find the optimal player count per server while keeping physics, villagers, and pipes at high FPS.</p>
           </div>
         </div>
       </section>
@@ -1022,7 +1082,7 @@
     <!-- Empty Search State -->
     <div id="noResults" class="no-results">
       <h3>No features found</h3>
-      <p>Try searching for something else like "crops", "villagers", "airship", or "biomes".</p>
+      <p>Try searching for something else like "stairs", "crops", "villagers", or "biomes".</p>
     </div>
   </main>
 
@@ -1042,8 +1102,7 @@
     (function() {
       var searchInput = document.getElementById('searchInput');
       var tabs = document.querySelectorAll('.tab-btn');
-      var blocks = document.querySelectorAll('.phase-block');
-      var cards = document.querySelectorAll('.feature-card');
+      var sections = document.querySelectorAll('.category-section');
       var noResults = document.getElementById('noResults');
 
       var activeStatus = 'all';
@@ -1053,11 +1112,11 @@
         var query = searchQuery.trim().toLowerCase();
         var totalVisible = 0;
 
-        blocks.forEach(function(block) {
-          var blockCards = block.querySelectorAll('.feature-card');
-          var visibleInBlock = 0;
+        sections.forEach(function(sec) {
+          var cards = sec.querySelectorAll('.feature-card');
+          var visibleInSec = 0;
 
-          blockCards.forEach(function(card) {
+          cards.forEach(function(card) {
             var cardStatus = card.getAttribute('data-status');
             var cardSearch = (card.getAttribute('data-search') || '').toLowerCase();
 
@@ -1066,17 +1125,17 @@
 
             if (matchesStatus && matchesQuery) {
               card.classList.remove('is-hidden');
-              visibleInBlock++;
+              visibleInSec++;
               totalVisible++;
             } else {
               card.classList.add('is-hidden');
             }
           });
 
-          if (visibleInBlock === 0) {
-            block.style.display = 'none';
+          if (visibleInSec === 0) {
+            sec.style.display = 'none';
           } else {
-            block.style.display = 'block';
+            sec.style.display = 'block';
           }
         });
 
