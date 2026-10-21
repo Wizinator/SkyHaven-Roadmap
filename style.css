@@ -219,21 +219,21 @@
 
     .hero-island-backdrop {
       position: absolute;
-      top: -15px;
+      top: -20px;
       left: 50%;
       transform: translateX(-50%);
       width: min(860px, 98vw);
-      height: 480px;
-      background-image: url('hero-island.png');
+      height: 500px;
+      background-image: url('hero-island.png?v=3');
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center top;
-      opacity: 0.18;
+      opacity: 0.45;
       pointer-events: none;
       z-index: 0;
       /* Soft radial gradient mask so all outer rectangular borders seamlessly melt into the dark background */
-      mask-image: radial-gradient(ellipse 65% 55% at 50% 40%, rgba(0, 0, 0, 1) 12%, rgba(0, 0, 0, 0) 76%);
-      -webkit-mask-image: radial-gradient(ellipse 65% 55% at 50% 40%, rgba(0, 0, 0, 1) 12%, rgba(0, 0, 0, 0) 76%);
+      mask-image: radial-gradient(ellipse 70% 60% at 50% 36%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0) 85%);
+      -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 36%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0) 85%);
     }
 
     .hero-content {
