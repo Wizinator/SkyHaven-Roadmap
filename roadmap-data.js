@@ -331,15 +331,6 @@ const ROADMAP_DATA = {
           badge: "Planned",
           description: "Fly to mysterious storm islands with your friends to fight monsters, solve puzzles, and win rare loot.",
           tags: ["Dungeons", "Monsters", "Combat"]
-        },
-        {
-          id: "f-advanced-machinery",
-          title: "Sprinklers & Auto-Harvesters",
-          category: "Automation",
-          status: "planned",
-          badge: "Planned",
-          description: "Build sprinkler systems to water whole fields at once, along with conveyor belts and sorters.",
-          tags: ["Sprinklers", "Machines"]
         }
       ]
     },

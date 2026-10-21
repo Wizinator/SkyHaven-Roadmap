@@ -67,7 +67,6 @@ Development Progress: [███████████░░░░░░░░
 - [x] **Factory Transport Pipes:** Connect machines, chests, and crops with pipes to move items around automatically. You can see items traveling inside. `[COMPLETE]`
 - [x] **Funnel Pipes:** Special funnel pipes that pick up dropped items from the ground and convert them into pipe transport items automatically. `[COMPLETE]`
 - [ ] **Industrial Equipment:** Heavy-duty processing machines including advanced smelters and stonecutters. `[IN PROGRESS]`
-- [ ] **Sprinklers & Auto-Harvesters:** Build sprinkler systems to water whole fields at once, along with conveyor belts and sorters. `[PLANNED]`
 
 ---
 
