@@ -106,41 +106,7 @@
       letter-spacing: 0.02em;
     }
 
-    /* ─── Subtle Ambient Floating Island Background ─── */
-    .bg-island-backdrop {
-      position: fixed;
-      right: clamp(-30px, 2vw, 40px);
-      bottom: clamp(10px, 4vh, 60px);
-      width: clamp(320px, 34vw, 540px);
-      aspect-ratio: 1042 / 738;
-      background-image: url('hero-island.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: right bottom;
-      opacity: 0.16;
-      filter: drop-shadow(0 20px 45px rgba(0, 0, 0, 0.95));
-      pointer-events: none;
-      z-index: 0;
-      animation: ambientIslandFloat 10s ease-in-out infinite alternate;
-    }
 
-    @keyframes ambientIslandFloat {
-      0% {
-        transform: translateY(0px) rotate(0deg);
-      }
-      100% {
-        transform: translateY(-16px) rotate(0.6deg);
-      }
-    }
-
-    @media (max-width: 768px) {
-      .bg-island-backdrop {
-        width: 230px;
-        opacity: 0.09;
-        right: -20px;
-        bottom: 10px;
-      }
-    }
 
     .site-header,
     main.container,
@@ -246,8 +212,33 @@
 
     /* ─── Hero ─── */
     .hero {
-      padding: 40px 0 24px;
+      position: relative;
+      padding: 44px 0 24px;
       text-align: center;
+    }
+
+    .hero-island-backdrop {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(860px, 98vw);
+      height: 480px;
+      background-image: url('hero-island.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center top;
+      opacity: 0.18;
+      pointer-events: none;
+      z-index: 0;
+      /* Soft radial gradient mask so all outer rectangular borders seamlessly melt into the dark background */
+      mask-image: radial-gradient(ellipse 65% 55% at 50% 40%, rgba(0, 0, 0, 1) 12%, rgba(0, 0, 0, 0) 76%);
+      -webkit-mask-image: radial-gradient(ellipse 65% 55% at 50% 40%, rgba(0, 0, 0, 1) 12%, rgba(0, 0, 0, 0) 76%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
     }
 
     .hero h1 {
