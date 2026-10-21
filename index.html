@@ -122,6 +122,39 @@
 
 
 
+    /* ─── Ambient Video Background ─── */
+    .video-bg-wrap {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .video-bg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      opacity: 0.85;
+      filter: saturate(1.05) brightness(0.92);
+    }
+
+    .video-bg-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(26, 14, 7, 0.76) 0%, rgba(20, 10, 5, 0.85) 100%);
+      pointer-events: none;
+    }
+
     .site-header,
     main.container,
     .site-footer {
@@ -137,13 +170,15 @@
 
     /* ─── Header ─── */
     .site-header {
-      background: #1a0f07;
+      background: rgba(26, 15, 7, 0.92);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       border-bottom: 2px solid var(--wood-border);
       padding: 14px 0;
       position: sticky;
       top: 0;
       z-index: 50;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
     }
 
     .header-inner {
@@ -588,6 +623,14 @@
   </style>
 </head>
 <body>
+
+  <!-- Ambient Looping Video Background -->
+  <div class="video-bg-wrap" aria-hidden="true">
+    <video class="video-bg" autoplay loop muted playsinline poster="hero-island.png">
+      <source src="bg-video.mp4" type="video/mp4">
+    </video>
+    <div class="video-bg-overlay"></div>
+  </div>
 
   <!-- Navigation Header -->
   <header class="site-header">
