@@ -347,47 +347,11 @@ const ROADMAP_DATA = {
       id: "phase-8",
       number: "8",
       title: "More to Come",
-      tagline: "Exciting future community expansions, pets, and world events",
+      tagline: "Future expansions, dungeons, pets, and community suggestions",
       status: "planned",
       completionPercentage: 0,
-      features: [
-        {
-          id: "f-pets",
-          title: "Pets & Companions",
-          category: "Companions",
-          status: "planned",
-          badge: "Planned",
-          description: "Tame, raise, and level up sky companions that follow your player around and help gather resources on your island.",
-          tags: ["Pets", "Animals", "Companions"]
-        },
-        {
-          id: "f-bosses",
-          title: "Boss Portals & World Events",
-          category: "Combat",
-          status: "planned",
-          badge: "Planned",
-          description: "Step through ancient portals to challenge colossal realm bosses and server-wide raid events for legendary artifacts.",
-          tags: ["Combat", "Bosses", "Portals"]
-        },
-        {
-          id: "f-showcase",
-          title: "Island Showcase & Codes",
-          category: "Social",
-          status: "planned",
-          badge: "Planned",
-          description: "Share custom island join codes, feature your sky builds on the community showcase board, and earn visitor upvotes.",
-          tags: ["Social", "Showcase", "Multiplayer"]
-        },
-        {
-          id: "f-community-discord",
-          title: "Community Suggestions & Voting",
-          category: "Community",
-          status: "planned",
-          badge: "Planned",
-          description: "Have suggestions? Join our Discord community to pitch game ideas and vote on which features get built next!",
-          tags: ["Community", "Discord", "Feedback"]
-        }
-      ]
+      description: "SkyHaven is an ever-expanding world in active development. Beyond the milestones listed on this roadmap, we have big plans for future updates — including uncharted sky biomes, storm dungeons, world bosses, companion pets, island visiting permissions, and player-driven trade economies.",
+      features: []
     }
   ]
 };

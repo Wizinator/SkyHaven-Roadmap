@@ -102,8 +102,8 @@ Development Progress: [███████████░░░░░░░░
 
 ## 🚀 10. More to Come
 
-- [ ] **Pets & Companions:** Tame, raise, and level up sky companions that follow your player around and help gather resources on your island. `[PLANNED]`
-- [ ] **Boss Portals & World Events:** Step through ancient portals to challenge colossal realm bosses and server-wide raid events for legendary artifacts. `[PLANNED]`
-- [ ] **Island Showcase & Visiting Codes:** Share custom island join codes, feature your sky builds on the community showcase board, and earn visitor upvotes. `[PLANNED]`
-- [ ] **Community Suggestions & Voting:** Have suggestions? Join our Discord community to pitch game ideas and vote on which features get built next! `[PLANNED]`
+SkyHaven is an ever-expanding world in active development. Beyond the milestones listed on this roadmap, we have big plans for future updates — including uncharted sky biomes, storm dungeons, world bosses, companion pets, island visiting permissions, and player-driven trade economies.
+
+We shape the game based on what players love most. If you have suggestions, feature requests, or cool ideas for what should come next, join our Discord and help us build the ultimate skyblock experience!
+
 
