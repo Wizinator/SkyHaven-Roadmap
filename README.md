@@ -97,3 +97,13 @@ Development Progress: [███████████░░░░░░░░
 - [x] **Streaming Enabled:** Smart object streaming so dense islands, massive builds, and machines load smoothly without crashing or lagging. `[COMPLETE]`
 - [ ] **Player Onboarding:** Interactive beginner tutorial, quest guidance, and hints to help new players get started on their island. `[IN PROGRESS]`
 - [ ] **Server Load Testing:** Stress-testing server performance to find the optimal player count per server while keeping physics, villagers, and pipes at high FPS. `[IN PROGRESS]`
+
+---
+
+## 🚀 10. More to Come
+
+- [ ] **Pets & Companions:** Tame, raise, and level up sky companions that follow your player around and help gather resources on your island. `[PLANNED]`
+- [ ] **Boss Portals & World Events:** Step through ancient portals to challenge colossal realm bosses and server-wide raid events for legendary artifacts. `[PLANNED]`
+- [ ] **Island Showcase & Visiting Codes:** Share custom island join codes, feature your sky builds on the community showcase board, and earn visitor upvotes. `[PLANNED]`
+- [ ] **Community Suggestions & Voting:** Have suggestions? Join our Discord community to pitch game ideas and vote on which features get built next! `[PLANNED]`
+

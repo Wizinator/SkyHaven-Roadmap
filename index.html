@@ -263,6 +263,9 @@
     }
 
     .btn-discord {
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -270,21 +273,38 @@
       font-size: 0.88rem;
       font-weight: 600;
       font-family: var(--font-ui);
+      white-space: nowrap;
       color: #24140b;
-      background: linear-gradient(135deg, #faecd0, #ecd8b9);
+      background-color: #faecd0;
+      background-image: linear-gradient(135deg, #faecd0, #ecd8b9);
       border: 1.5px solid var(--divider-gold);
       border-radius: var(--radius);
       text-decoration: none;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.6);
-      transition: all 0.15s ease;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+    }
+
+    .btn-discord::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: #ffffff;
+      opacity: 0;
+      transition: opacity 0.15s ease;
+      z-index: -1;
+      border-radius: calc(var(--radius) - 1.5px);
+      pointer-events: none;
+    }
+
+    .btn-discord:hover::before {
+      opacity: 1;
     }
 
     .btn-discord:hover {
-      background: #ffffff;
       color: #170c06;
       border-color: #faecd0;
       transform: translateY(-1px);
-      box-shadow: 0 4px 14px rgba(207, 168, 118, 0.4);
+      box-shadow: 0 4px 14px rgba(207, 168, 118, 0.45);
     }
 
     .btn-discord .discord-icon {
@@ -292,6 +312,15 @@
       height: 18px;
       fill: #5865F2;
       flex-shrink: 0;
+      transition: transform 0.15s ease;
+    }
+
+    .btn-discord:hover .discord-icon {
+      transform: scale(1.05);
+    }
+
+    .btn-discord-text-short {
+      display: none;
     }
 
     /* ─── Hero ─── */
@@ -363,7 +392,7 @@
 
     .progress-fill {
       height: 100%;
-      width: 56%;
+      width: 51%;
       background: linear-gradient(90deg, #7da732, #b6e459);
       border-radius: 4px;
     }
@@ -680,6 +709,11 @@
       .brand-title { font-size: 1.15rem; }
       .brand-tag { display: none; }
     }
+
+    @media (max-width: 540px) {
+      .btn-discord-text-full { display: none; }
+      .btn-discord-text-short { display: inline; }
+    }
   </style>
 </head>
 <body>
@@ -708,7 +742,8 @@
           <svg class="discord-icon" viewBox="0 0 24 24" fill="currentColor">
             <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
           </svg>
-          <span>Join the Discord!</span>
+          <span class="btn-discord-text-full">Have suggestions? Join the Discord!</span>
+          <span class="btn-discord-text-short">Join Discord</span>
         </a>
       </div>
     </div>
@@ -723,7 +758,7 @@
       <div class="progress-frame">
         <div class="progress-frame-top">
           <span class="progress-title">Overall Game Development</span>
-          <span class="progress-pct">56% Complete</span>
+          <span class="progress-pct">51% Complete</span>
         </div>
         <div class="progress-track">
           <div class="progress-fill"></div>
@@ -731,8 +766,8 @@
         <div class="stats-summary">
           <div>Complete: <strong>23</strong></div>
           <div>In Progress: <strong>12</strong></div>
-          <div>Planned: <strong>6</strong></div>
-          <div>Total Features: <strong>41</strong></div>
+          <div>Planned: <strong>10</strong></div>
+          <div>Total Features: <strong>45</strong></div>
         </div>
       </div>
     </section>
@@ -748,10 +783,10 @@
       </div>
 
       <div class="tab-buttons">
-        <button class="tab-btn active" data-status="all">All (41)</button>
+        <button class="tab-btn active" data-status="all">All (45)</button>
         <button class="tab-btn" data-status="completed">Complete (23)</button>
         <button class="tab-btn" data-status="in-progress">In Progress (12)</button>
-        <button class="tab-btn" data-status="planned">Planned (6)</button>
+        <button class="tab-btn" data-status="planned">Planned (10)</button>
       </div>
     </section>
 
@@ -1244,6 +1279,55 @@
         </div>
       </section>
 
+      <!-- 10. More to Come -->
+      <section class="category-section" data-cat="future">
+        <div class="category-divider-header">
+          <div class="divider-diamond"></div>
+          <div class="divider-line"></div>
+          <h2 class="category-title">More to Come</h2>
+          <div class="divider-line"></div>
+          <div class="divider-diamond"></div>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card" data-status="planned" data-search="pets companions mounts animals breeding followers taming helpers">
+            <div class="card-top">
+              <span class="badge-subcat">Companions</span>
+              <span class="badge badge-planned">Planned</span>
+            </div>
+            <h3>Pets & Companions</h3>
+            <p>Tame, raise, and level up sky companions that follow your player around and help gather resources on your island.</p>
+          </div>
+
+          <div class="feature-card" data-status="planned" data-search="bosses portals world events raid combat guardians artifacts trials dungeons">
+            <div class="card-top">
+              <span class="badge-subcat">Combat</span>
+              <span class="badge badge-planned">Planned</span>
+            </div>
+            <h3>Boss Portals & World Events</h3>
+            <p>Step through ancient portals to challenge colossal realm bosses and server-wide raid events for legendary artifacts.</p>
+          </div>
+
+          <div class="feature-card" data-status="planned" data-search="island showcase visiting codes social guest ratings upvotes builds community">
+            <div class="card-top">
+              <span class="badge-subcat">Social</span>
+              <span class="badge badge-planned">Planned</span>
+            </div>
+            <h3>Island Showcase & Codes</h3>
+            <p>Share custom island join codes, feature your sky builds on the community showcase board, and earn visitor upvotes.</p>
+          </div>
+
+          <div class="feature-card" data-status="planned" data-search="community suggestions feature voting discord ideas player feedback roadmap">
+            <div class="card-top">
+              <span class="badge-subcat">Community</span>
+              <span class="badge badge-planned">Planned</span>
+            </div>
+            <h3>Community Suggestions & Voting</h3>
+            <p>Have suggestions? Join our Discord community to pitch game ideas and vote on which features get built next!</p>
+          </div>
+        </div>
+      </section>
+
     </div>
 
     <!-- Empty Search State -->
@@ -1258,7 +1342,7 @@
     <div class="container footer-inner">
       <p>SkyHaven (Roblox) — Official player development roadmap</p>
       <div class="footer-links">
-        <a href="https://discord.gg/3NhnNsRM5H" target="_blank" rel="noopener noreferrer">Join the Discord!</a>
+        <a href="https://discord.gg/3NhnNsRM5H" target="_blank" rel="noopener noreferrer">Have suggestions? Join the Discord!</a>
       </div>
     </div>
   </footer>
