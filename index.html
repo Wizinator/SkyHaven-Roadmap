@@ -87,15 +87,18 @@
 
     body {
       font-family: var(--font-body);
-      background-color: var(--bg-deep);
+      background-color: #170c06;
       background-image: 
-        radial-gradient(ellipse at 50% 0%, rgba(100, 60, 35, 0.35) 0%, transparent 70%),
-        linear-gradient(180deg, #24140b 0%, #1e1109 400px, #170c06 100%);
+        linear-gradient(180deg, rgba(28, 16, 8, 0.82) 0%, rgba(20, 10, 5, 0.88) 100%),
+        url('hero-island.png');
+      background-attachment: fixed;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
       color: var(--text-cream);
       line-height: 1.5;
       min-height: 100vh;
       padding-bottom: 70px;
-      position: relative;
     }
 
     body, button, input, select, textarea {
@@ -223,33 +226,8 @@
 
     /* ─── Hero ─── */
     .hero {
-      position: relative;
-      padding: 44px 0 24px;
+      padding: 40px 0 24px;
       text-align: center;
-    }
-
-    .hero-island-backdrop {
-      position: absolute;
-      top: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: min(860px, 98vw);
-      height: 500px;
-      background-image: url('hero-island.png?v=3');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center top;
-      opacity: 0.45;
-      pointer-events: none;
-      z-index: 0;
-      /* Soft radial gradient mask so all outer rectangular borders seamlessly melt into the dark background */
-      mask-image: radial-gradient(ellipse 70% 60% at 50% 36%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0) 85%);
-      -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 36%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0) 85%);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
     }
 
     .hero h1 {
@@ -638,25 +616,22 @@
   <main class="container">
     <!-- Hero / Progress -->
     <section class="hero">
-      <div class="hero-island-backdrop" aria-hidden="true"></div>
-      <div class="hero-content">
-        <h1>Game Progress & Roadmap</h1>
-        <p>Explore what is complete in the game, in active development, and planned for future updates.</p>
+      <h1>Game Progress & Roadmap</h1>
+      <p>Explore what is complete in the game, in active development, and planned for future updates.</p>
 
-        <div class="progress-frame">
-          <div class="progress-frame-top">
-            <span class="progress-title">Overall Game Development</span>
-            <span class="progress-pct">56% Complete</span>
-          </div>
-          <div class="progress-track">
-            <div class="progress-fill"></div>
-          </div>
-          <div class="stats-summary">
-            <div>Complete: <strong>23</strong></div>
-            <div>In Progress: <strong>12</strong></div>
-            <div>Planned: <strong>6</strong></div>
-            <div>Total Features: <strong>41</strong></div>
-          </div>
+      <div class="progress-frame">
+        <div class="progress-frame-top">
+          <span class="progress-title">Overall Game Development</span>
+          <span class="progress-pct">56% Complete</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill"></div>
+        </div>
+        <div class="stats-summary">
+          <div>Complete: <strong>23</strong></div>
+          <div>In Progress: <strong>12</strong></div>
+          <div>Planned: <strong>6</strong></div>
+          <div>Total Features: <strong>41</strong></div>
         </div>
       </div>
     </section>
