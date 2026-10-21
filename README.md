@@ -36,9 +36,9 @@ Development Progress: [███████████░░░░░░░░
 
 ## ⛏️ 3. Mining & Tools
 
-- [x] **Ore Nodes & Pickaxes:** Mine stone, coal, iron, and gold nodes that spawn around your island using tiered pickaxes. `[COMPLETE]`
+- [x] **Ore Nodes & Pickaxes:** Mine stone, coal, iron, and gold nodes that spawn after placing resource hearts on your island. `[COMPLETE]`
 - [x] **Player Skills & Leveling:** Level up your Farming, Mining, and Woodcutting skills to unlock better tools, faster speeds, and rare seeds. `[COMPLETE]`
-- [ ] **Tool Animations:** Custom swing, till, chop, and mining animations with smooth spring physics for all tools. `[IN PROGRESS]`
+- [ ] **Tool Animations:** Custom swing, till, chop, and mining animations for all tools. `[IN PROGRESS]`
 
 ---
 
@@ -49,7 +49,6 @@ Development Progress: [███████████░░░░░░░░
 - [x] **Droppable Items (Q / F):** Press Q to drop items on the ground and press F while aiming to pick them up. `[COMPLETE]`
 - [x] **Safe Inventory System:** Items move smoothly between inventory, chests, and crafting without risk of disappearing or duplicating. `[COMPLETE]`
 - [x] **Furnaces & Composters:** Smelt raw iron and gold into ingots, or turn organic scraps into fertilizer to speed up crops. `[COMPLETE]`
-- [ ] **Industrial Equipment:** Heavy-duty processing machines including advanced smelters, stonecutters, and high-throughput fabricators. `[IN PROGRESS]`
 
 ---
 
@@ -67,6 +66,7 @@ Development Progress: [███████████░░░░░░░░
 
 - [x] **Factory Transport Pipes:** Connect machines, chests, and crops with pipes to move items around automatically. You can see items traveling inside. `[COMPLETE]`
 - [x] **Funnel Pipes:** Special funnel pipes that pick up dropped items from the ground and convert them into pipe transport items automatically. `[COMPLETE]`
+- [ ] **Industrial Equipment:** Heavy-duty processing machines including advanced smelters and stonecutters. `[IN PROGRESS]`
 - [ ] **Sprinklers & Auto-Harvesters:** Build sprinkler systems to water whole fields at once, along with conveyor belts and sorters. `[PLANNED]`
 
 ---

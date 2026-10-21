@@ -108,8 +108,8 @@ const ROADMAP_DATA = {
           category: "Mining",
           status: "completed",
           badge: "Released",
-          description: "Mine stone, coal, iron, and gold nodes that spawn around your island using tiered pickaxes.",
-          tags: ["Mining", "Ores"]
+          description: "Mine stone, coal, iron, and gold nodes that spawn after placing resource hearts on your island.",
+          tags: ["Mining", "Ores", "Hearts"]
         }
       ]
     },
