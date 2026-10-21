@@ -1,112 +1,80 @@
-# 🌌 SkyHaven — Official Development Roadmap
+# 🏝️ SkyHaven — Game Roadmap
 
-> **Live Interactive Dashboard:** [https://wizinator.github.io/SkyHaven-Roadmap/](https://wizinator.github.io/SkyHaven-Roadmap/)  
-> Track real-time progress, filter features by category (Farming, Building, Automation, AI), and explore upcoming milestones.
-
----
-
-## 🧭 Milestone Overview
-
-```
-Phase 1: Genesis & Island Engine ───────── [████████████████████] 100% Live
-Phase 2: Flora & Earth Harvest ─────────── [████████████████████] 100% Live
-Phase 3: Workshop & Storage ────────────── [████████████████████] 100% Live
-Phase 4: Industry & Automata ───────────── [███████████████████░]  95% Live
-Phase 5: Airships & Open Skies ─────────── [█████████████░░░░░░░]  65% In Development
-Phase 6: Merchant Realm & Trading ──────── [███░░░░░░░░░░░░░░░░░]  15% Planned (Next Up)
-Phase 7: Wild Expansions & Relics ──────── [░░░░░░░░░░░░░░░░░░░░]   0% Future Horizon
-```
+> **Live Website:** [https://wizinator.github.io/SkyHaven-Roadmap/](https://wizinator.github.io/SkyHaven-Roadmap/)  
+> Check out what's in the game now and what we're working on next.
 
 ---
 
-## 📦 Phase 1: Genesis & Island Engine `[COMPLETED]`
+## 🧭 Overview
 
-The foundational architecture powering SkyHaven's floating realms.
-
-- [x] **3D Grid Placement Engine:** Ultra-fast 3x3x3 stud voxel grid with integer coordinate hashing for $O(1)$ cell lookups and island perimeter bounds.
-- [x] **2D+3D Greedy Block Mesher:** Merges adjacent identical standard blocks into monolithic meshes, reducing part counts and draw calls by up to 90%.
-- [x] **ProfileStore Persistence:** Binary buffer serialization for instant island saving and loading with zero data loss.
-- [x] **Dynamic Smart Block Transforms:** Grass auto-decays to dirt when covered; stairs automatically detect neighbours and adapt to corners and inner curves.
-- [x] **Physics Spring UI:** Custom animated backpack, category tabs, and slot grid controls.
-
----
-
-## 🌾 Phase 2: Flora & Earth Harvest `[COMPLETED]`
-
-Comprehensive agriculture, natural ore generation, and forestry.
-
-- [x] **14+ Staged Crops:** Wheat, Tomatoes, Potatoes, Carrots, Cabbage, Onions, Pumpkins, Trellis Grapes, Watermelons, Radishes, Pineapples, Cactus, Rice, and Dragonfruit.
-- [x] **Agricultural Tools:** Tillers/Plows, Basic & Improved Watering Cans, and tiered Sickles (Iron, Gilded Steel, Diamond).
-- [x] **Forestry & Orchards:** 7 sapling varieties (Birch, Maple, Pine, Acacia, Apple, Lemon, Avocado) with tiered felling axes and fruit wackers.
-- [x] **Natural Heart Ore Nodes:** Periodic natural ore node spawning (Stone, Coal, Iron, Gold) with hardness checks and physics debris particle arcs.
+- **Phase 1: Building & Island Basics** — `Released` (100%)
+- **Phase 2: Farming & Mining** — `Released` (100%)
+- **Phase 3: Storage & Crafting** — `Released` (100%)
+- **Phase 4: Villagers & Factory Pipes** — `Released` (95%)
+- **Phase 5: Airships & Visiting Friends** — `In Progress` (~65%)
+- **Phase 6: Trading & Shops** — `Planned`
+- **Phase 7: Animals & Dungeons** — `Planned`
 
 ---
 
-## ⚒️ Phase 3: Workshop & Storage `[COMPLETED]`
+## ✅ Phase 1: Building & Island Basics (Released)
 
-Exploit-proof item transaction mechanics and crafting workstations.
-
-- [x] **Atomic Inventory Ledger:** Server-authoritative transaction mutex that mathematically prevents duplication across drops, trades, and storage.
-- [x] **Physical Dropped Items (Q / F):** Toss items into the world and target-pickup with cursor raycasts; LOD simulation with offstage culling and island caps.
-- [x] **Animated Chest Storage:** Authoritative container chests with smooth spring-driven lid animations and shared nearby-player synchronization.
-- [x] **Instant Crafting Bench:** Categorized recipe trees for tools, seeds, and industrial components.
-- [x] **Continuous Processing Benches:** Smelters, Furnaces, and Composters that process raw materials into refined ingots and organic fertilizer over real-time ticks.
+- [x] **Block Placement & Building:** Place and break blocks on your private floating island with smooth grid alignment.
+- [x] **Lag-Free Optimization:** Blocks merge together behind the scenes, keeping the game smooth even with huge islands.
+- [x] **Auto-Save System:** Your island, inventory, and chests save automatically so you never lose progress.
+- [x] **Smart Grass & Stairs:** Dirt turns to grass under sunlight, and stair blocks auto-turn into corners when placed together.
+- [x] **Backpack & Hotbar:** Clean inventory menu with item categories and a quick hotbar to switch tools easily.
 
 ---
 
-## ⚙️ Phase 4: Industry & Automata `[COMPLETED / POLISHING]`
+## ✅ Phase 2: Farming & Mining (Released)
 
-Autonomous NPC helpers and 3D pneumatic factory pipelines.
-
-- [x] **3D Grid A\* Pathfinder:** Custom binary min-heap A\* pathfinding over 3D terrain with stair detection and 2-block headroom clearance.
-- [x] **Autonomous Villager Helpers:** Recruit Farmer Villagers (auto-till, plant, reap, and store) and Miner Villagers (seek ore nodes and mine).
-- [x] **3D Factory Pipe Logistics:** 6-neighbour pneumatic pipes with automatic variant solving (End, Straight, Bend, Tee, Cross) and transparent glass inspection windows.
-- [x] **Skill Masteries (Level 1–100):** Farming, Mining, and Woodcutting XP curves with unlockable tool and villager milestones.
+- [x] **14 Different Crops:** Plant and harvest Wheat, Tomatoes, Potatoes, Carrots, Onions, Pumpkins, Watermelons, Pineapples, Dragonfruit, and more.
+- [x] **Watering Cans & Sickles:** Till dirt with a hoe, speed up crop growth with watering cans, and harvest faster using tiered sickles.
+- [x] **Trees & Fruit Picking:** Chop down Birch, Pine, and Oak trees for wood, or grow Apple, Lemon, and Avocado trees for fresh fruit.
+- [x] **Ore Nodes & Pickaxes:** Mine stone, coal, iron, and gold nodes that spawn around your island using tiered pickaxes.
 
 ---
 
-## ⛵ Phase 5: Airships & The Open Skies `[IN DEVELOPMENT]`
+## ✅ Phase 3: Storage & Crafting (Released)
 
-Expanding beyond private realms into inter-island exploration.
-
-- [x] **Persistent Dock Airships:** Server-replicated airships moored at island dock blocks.
-- [ ] **Island Visiting & Permissions:** Island directory browser, guest building permissions, and blocklists. *(In Progress)*
-- [ ] **Atmospheric Day/Night Cycle:** Celestial twilight lighting, wind line visualizers, and reactive foliage sway. *(In Progress)*
-- [ ] **3D Island Previews:** Lightweight binary snapshot previews before teleporting. *(Testing)*
-
----
-
-## 🪙 Phase 6: Merchant Realm & Trading `[PLANNED]`
-
-A thriving player-driven economy and social trading.
-
-- [ ] **The Floating Merchant Hub:** Central social town where players meet wandering traders, buy exotic blueprints, and gather.
-- [ ] **Player Stalls & Secure Trade Windows:** Direct 2-way verified player trading sessions and island vending booths.
-- [ ] **SkyHaven Currency:** Minted coins from refined ores and daily delivery orders.
-- [ ] **Cosmetic Island Customization:** Banners, illuminated lanterns, and custom airship hulls.
+- [x] **Safe Inventory System:** Items move smoothly between inventory, chests, and crafting without risk of disappearing or duplicating.
+- [x] **Drop & Pick Up Items (Q / F):** Press Q to drop items on the ground and press F while aiming to pick them up.
+- [x] **Storage Chests:** Place wooden and iron chests to store items with animated opening lids.
+- [x] **Crafting Workbench:** Craft new tools, seeds, decorative blocks, and building parts from materials you collect.
+- [x] **Furnaces & Composters:** Smelt raw iron and gold into ingots, or turn organic scraps into fertilizer to speed up crops.
 
 ---
 
-## 🐉 Phase 7: Wild Expansions & Relics `[FUTURE HORIZON]`
+## ✅ Phase 4: Villagers & Factory Pipes (Released)
 
-New horizons, animal husbandry, and sky dungeon expeditions.
-
-- [ ] **Pasture & Animal Husbandry:** Chickens, Sheep, and Cows with fenced pastures, feeding troughs, and Rancher Villagers.
-- [ ] **Forgotten Sky Dungeons & Bosses:** Mysterious storm islands featuring PvE monster encounters, ancient golems, and legendary loot.
-- [ ] **Sprinklers & Advanced Automation:** Automatic crop watering grids, item splitters, and conveyor belts.
+- [x] **Villager Helpers:** Place a bed to invite villagers to live on your island. Farmer villagers till, plant, and harvest crops; miner villagers break ores for you.
+- [x] **Smart Villager Walking:** Villagers can walk up stairs, navigate around walls, and find their way around your builds.
+- [x] **Factory Transport Pipes:** Connect machines, chests, and crops with pipes to move items around automatically.
+- [x] **Player Skills & Leveling:** Level up your Farming, Mining, and Woodcutting skills to unlock better tools, faster speeds, and rare seeds.
 
 ---
 
-## 🚀 How to Enable GitHub Pages
+## 🔨 Phase 5: Airships & Visiting Friends (In Progress)
 
-To make the interactive roadmap website live on GitHub:
+- [x] **Personal Island Airship:** Every island comes with a dock and an airship ready to take you into the skies.
+- [ ] **Visiting Other Islands:** Browse online players and visit their islands. Island owners can set permissions, block players, or make their island private.
+- [ ] **Day & Night Sky:** Dynamic daylight, sunset, and starry nights with soft wind effects through the trees.
+- [ ] **Island Previews:** See a snapshot of an island and its owner's level before you fly there.
 
-1. Push your latest commits to GitHub (`git push origin main`).
-2. Go to your repository on GitHub: `https://github.com/Wizinator/SkyHaven-Roadmap`.
-3. Click **Settings** ➔ **Pages** (under "Code and automation").
-4. Under **Build and deployment**:
-   - **Source**: Select `Deploy from a branch`.
-   - **Branch**: Select `main` (or your default branch) and select `/ (root)` as the folder.
-   - Click **Save**.
-5. Within 1–2 minutes, your roadmap will be live at:  
-   👉 **`https://wizinator.github.io/SkyHaven-Roadmap/`**
+---
+
+## 📋 Phase 6: Trading & Shops (Planned)
+
+- [ ] **Public Market Hub:** A central sky town where players gather to meet wandering merchants and buy rare seeds and blueprints.
+- [ ] **Player-to-Player Trading:** Trade items and resources safely with other players through a secure trade menu, or set up a stall on your island.
+- [ ] **Coins & Currency:** Earn coins by selling crops, fulfilling orders, and completing daily island challenges.
+- [ ] **Airship Skins & Banners:** Customize your island with decorative flags, lanterns, and paint colors for your airship.
+
+---
+
+## 💡 Phase 7: Animals & Dungeons (Future Ideas)
+
+- [ ] **Farm Animals:** Raise chickens for eggs, sheep for wool, and cows for milk in fenced pastures on your island.
+- [ ] **Sky Dungeons & Monsters:** Fly to mysterious storm islands with your friends to fight monsters, solve puzzles, and win rare loot.
+- [ ] **Sprinklers & Auto-Harvesters:** Build sprinkler systems to water whole fields at once, along with conveyor belts and sorters.
